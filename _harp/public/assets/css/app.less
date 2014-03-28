@@ -1,1 +1,178 @@
-@import '_bootstrap';
+
+/* ====================
+    Variables
+   ==================== */
+
+@white: #fff;
+@brand-primary: #b44647;
+@bg-primary: #98d7cb;
+@font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif: Georgia, "Times New Roman", Times, serif;
+@font-base: @font-family-sans-serif;
+/* ====================
+    Mixins
+   ==================== */
+
+
+/* ====================
+    Columns
+   ==================== */
+
+.col{
+  display: inline-block;
+  padding: 2%;
+  vertical-align: top;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.col-left{
+  display: block;
+  width: 100%;
+}
+.col-right{
+  display: block;
+  width: 100%;
+}
+@media (min-width: 500px){
+  .col-left{
+    display: inline-block;
+    width: 70%;
+    margin-right: 30%;
+
+  }
+  .col-right{
+    position: fixed;
+    right: 0;
+    display: inline-block;
+    height: 100%;
+    width: 30%;
+  }
+}
+
+
+/* ====================
+    HTML
+   ==================== */
+
+body{
+  margin: 0;
+  font-family: @font-base;
+}
+
+
+/* ====================
+    Utilities
+   ==================== */
+
+.btn{
+  padding: 8px 12px;
+  color: @brand-primary;
+  text-decoration: none;
+  border: 2px solid @brand-primary;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* ====================
+    Header
+   ==================== */
+
+.logo{
+  img{
+    margin-top: -60px;
+    width: 250px;
+    height: auto;
+    z-index: 100;
+    opacity: 0;
+
+  }
+}
+.questions{
+  position: absolute;
+  right: 100px;
+  top: 120px;
+  max-width: 500px;
+  color: @white;
+  text-align: right;
+  h1{
+    font-family: @font-family-serif;
+    font-size: 50px;
+  }
+}
+
+.wipe{
+
+}
+.col-left{
+  background: @bg-primary;
+}
+.col-right{
+  color: @white;
+  background: url(../img/ocean.jpg);
+  background-size: 100%;
+}
+
+/* ====================
+    Header
+   ==================== */
+
+
+/* Nav */
+
+.goodnav{
+  position: fixed;
+  top: 120px;
+  a{
+    font-size: 25px;
+    font-weight: 600;
+    padding: 5px;
+    display: block;
+    color: @white;
+    text-decoration: none;
+    span{
+      color: #8f8f8f;
+    }
+  }
+}
+
+  .what{
+    span{
+      display:none;
+    }
+    &:hover{
+      span{
+        display:inline;
+      }
+    }
+  }
+  .how{
+    span{
+      display:none;
+    }
+    &:hover{
+      span{
+        display:inline;
+      }
+    }
+  }
+  .who{
+    span{
+      display:none;
+    }
+    &:hover{
+      span{
+        display:inline;
+      }
+    }
+  }
+
+
+.formup-delta{
+  padding: 15px;
+  font-family: @font-base;
+  font-size: 20px;
+  border: none;
+  border-bottom: 1px solid @brand-primary;
+}

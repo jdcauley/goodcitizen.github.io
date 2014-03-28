@@ -1,0 +1,43 @@
+section.col.col-left
+  h1.hero-lead We create compelling digital experiences, by putting people first.
+  h1 Working for You
+  p Your needs are our priorities. Let us provide answers for your digital questions.
+
+  h3 If you'd like to chat about your project, they crazy internet, or the weather in Prague in Autumn, we'll buy the coffee.  Just drop us a line.
+
+
+  a.twitter-share-button.btn(href="http://twitter.com/share?text=Hey%20@thegoodcitizens,%20lets%20chat%20over%20coffee", target="_blank") Let's Have Coffee
+
+  form(action="http://localhost:1337/contact/new" method="post")
+    p Who are You?
+    input.formup-delta(type="text", name="firstname", value="", placeholder="First Name")
+    input.formup-delta(type="text", name="lastname", value="", placeholder="Last Name")
+    p What do you do?
+    input.formup-delta(type="text", name="title", value="", placeholder="Title")
+    input.formup-delta(type="text", name="company", value="", placeholder="Company")
+    p How can we reach you?
+    input.formup-delta(type="text", name="email", value="", placeholder="Email")
+    input.formup-delta(type="text", name="phone", value="", placeholder="Phone Number")
+
+    p Tell us a little about your project
+    select.formup-delta(name="budget")
+      option(value="$2k-$5k") $2k-$5k
+      option(value="$5k-$10k") $5k-$10k
+      option(value="$10k-$20k") $10k-$20k
+      option(value="$20k+") $20k+
+      option(value="Not Sure") Not Sure
+
+    input.formup-delta(type="text", name="subject", value="", placeholder="Subject")
+    input.formup-delta(type="text", name="message", value="", placeholder="Message")
+    input.formup-delta(type="submit", value="Submit")
+
+
+
+section.col.col-right
+  header
+    a.logo(href="#{ site_url }")
+      img(src="#{ site_url }/assets/img/logo.png")
+  nav.goodnav
+    a.what(href="#") What <span>we do for you</span>
+    a.how(href="#") How <span>we do it</span>
+    a.who(href="#") Who <span>we are</span>

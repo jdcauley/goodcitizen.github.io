@@ -5,6 +5,7 @@
 
 @white: #fff;
 @brand-primary: #b44647;
+@gray: #e7e7e7;
 @bg-primary: #98d7cb;
 @font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif: Georgia, "Times New Roman", Times, serif;
@@ -132,7 +133,7 @@ body{
     color: @white;
     text-decoration: none;
     span{
-      color: #8f8f8f;
+      color: @gray;
     }
   }
 }
@@ -170,9 +171,13 @@ body{
 
 
 .formup-delta{
-  padding: 15px;
+  padding: 10px;
+  width: 140px;
+  margin-left: 5px;
+  margin-right: 5px;
   font-family: @font-base;
   font-size: 20px;
   border: none;
   border-bottom: 1px solid @brand-primary;
+  background: @gray;
 }

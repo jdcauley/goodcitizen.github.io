@@ -9,17 +9,18 @@ section.col.col-left
   a.twitter-share-button.btn(href="http://twitter.com/share?text=Hey%20@thegoodcitizens,%20lets%20chat%20over%20coffee", target="_blank") Let's Have Coffee
 
   form(action="http://localhost:1337/contact/new" method="post")
-    p Who are You?
-    input.formup-delta(type="text", name="firstname", value="", placeholder="First Name")
-    input.formup-delta(type="text", name="lastname", value="", placeholder="Last Name")
-    p What do you do?
-    input.formup-delta(type="text", name="title", value="", placeholder="Title")
-    input.formup-delta(type="text", name="company", value="", placeholder="Company")
-    p How can we reach you?
-    input.formup-delta(type="text", name="email", value="", placeholder="Email")
-    input.formup-delta(type="text", name="phone", value="", placeholder="Phone Number")
+    h1 We'd like to get to know you!
+    h1 What do you like to be called
+      input.formup-delta(type="text", name="firstname", value="", placeholder="First Name")
+      input.formup-delta(type="text", name="lastname", value="", placeholder="Last Name")
+    h1 What do you do?
+      input.formup-delta(type="text", name="job", value="", placeholder="Job")
+      input.formup-delta(type="text", name="company", value="", placeholder="Company")
+    h1 We'd love to get back to you, how can we do that?
+      input.formup-delta(type="text", name="email", value="", placeholder="Email")
+      input.formup-delta(type="text", name="phone", value="", placeholder="Phone Number")
 
-    p Tell us a little about your project
+    h1 Tell us a little about your project
     select.formup-delta(name="budget")
       option(value="$2k-$5k") $2k-$5k
       option(value="$5k-$10k") $5k-$10k

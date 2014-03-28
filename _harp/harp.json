@@ -3,7 +3,7 @@
   "globals": {
     "site_title": "My Harp Blog",
     "twitter": "@HarpPlatform",
-    "site_url": "http://example.com",
+    "site_url": "",
     "disqus": {
       "show": false,
       "shortname": ""

@@ -1,0 +1,32 @@
+header
+  a.logo(href="#{ site_url }")
+    img(src="#{ site_url }/assets/img/logo.png")
+  .ocean
+    // (data-0="background-position: 0 -250px;", data-end="background-position: 0 -350px;")
+
+    .questions
+      h1 How can I engage my customers online?
+
+section.wipe
+  .col-left
+    h1.see We believe in a better web
+
+  .col-right
+    h1 Working for You
+    p Your needs are our priorities. Let us provide answers for your digital questions.
+
+  form(action="http://localhost:1337/contact/new" method="post")
+
+    input(type="text", name="firstname", value="", placeholder="First Name")
+    input(type="text", name="lastname", value="", placeholder="Last Name")
+    input(type="text", name="email", value="", placeholder="Email")
+    input(type="text", name="phone", value="", placeholder="Phone Number")
+    select(name="budget")
+      option(value="$2k-$5k") $2k-$5k
+      option(value="$5k-$10k") $5k-$10k
+      option(value="$10k-$20k") $10k-$20k
+      option(value="$20k+") $20k+
+  
+    input(type="text", name="subject", value="", placeholder="Subject")
+    input(type="text", name="message", value="", placeholder="Message")
+    input(type="submit", value="Submit")

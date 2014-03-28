@@ -1,4 +1,4 @@
-
+@import '_select';
 /* ====================
     Variables
    ==================== */
@@ -35,7 +35,7 @@
   display: block;
   width: 100%;
 }
-@media (min-width: 500px){
+@media (min-width: 600px){
   .col-left{
     display: inline-block;
     width: 70%;
@@ -79,17 +79,59 @@ body{
 /* ====================
     Header
    ==================== */
-
+header{
+  display: block;
+  margin-top: -60px;
+  opacity: 0;
+}
 .logo{
   img{
+    display: block;
     margin-top: -60px;
-    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 280px;
+    width: 100%;
     height: auto;
-    z-index: 100;
-    opacity: 0;
-
   }
 }
+
+/* Nav */
+
+.goodnav{
+  max-width: 280px;
+  width: 100%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  a{
+    font-size: 25px;
+    font-weight: 600;
+    padding: 5px;
+    display: block;
+    color: @white;
+    text-decoration: none;
+    span{
+      color: @gray;
+      display:none;
+    }
+    &:hover{
+      span{
+        display:inline;
+      }
+    }
+    .active{
+      span{
+        display:inline;
+      }
+    }
+  }
+}
+
+/* ====================
+    Content
+   ==================== */
+
 .questions{
   position: absolute;
   right: 100px;
@@ -114,70 +156,33 @@ body{
   background: url(../img/ocean.jpg);
   background-size: 100%;
 }
-
-/* ====================
-    Header
-   ==================== */
-
-
-/* Nav */
-
-.goodnav{
-  position: fixed;
-  top: 120px;
-  a{
-    font-size: 25px;
-    font-weight: 600;
-    padding: 5px;
-    display: block;
-    color: @white;
-    text-decoration: none;
-    span{
-      color: @gray;
-    }
-  }
+.right-body{
+  margin-top: 300px;
 }
-
-  .what{
-    span{
-      display:none;
-    }
-    &:hover{
-      span{
-        display:inline;
-      }
-    }
-  }
-  .how{
-    span{
-      display:none;
-    }
-    &:hover{
-      span{
-        display:inline;
-      }
-    }
-  }
-  .who{
-    span{
-      display:none;
-    }
-    &:hover{
-      span{
-        display:inline;
-      }
-    }
-  }
-
 
 .formup-delta{
   padding: 10px;
-  width: 140px;
+  width: 45%;
   margin-left: 5px;
   margin-right: 5px;
   font-family: @font-base;
   font-size: 20px;
   border: none;
   border-bottom: 1px solid @brand-primary;
-  background: @gray;
+  background: #f6f6f6;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+.budget{
+  width: 90%;
+}
+.pname{
+  width: 90%;
+  margin-top: 10px;
+}
+.message{
+  width: 90%;
+  height: 200px;
+  margin-top: 10px;
 }

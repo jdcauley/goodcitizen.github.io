@@ -1,50 +1,38 @@
-main.col.col-left
-  section#what
-    h1.hero-lead We create compelling digital experiences, by putting people first.
-    h1 Working for You
-    p Your needs are our priorities. Let us provide answers for your digital questions.
+section
+  .col.two-thirds.main
+    .half
+      form(action="http://localhost:1337/contact/new" method="post")
+        h1 We'd like to get to know you!
+        h1 What do you like to be called
+        input.formup-delta(type="text", name="firstname", value="", placeholder="First Name")
+        input.formup-delta(type="text", name="lastname", value="", placeholder="Last Name")
+        h1 What do you do?
+        input.formup-delta(type="text", name="job", value="", placeholder="Job")
+        input.formup-delta(type="text", name="company", value="", placeholder="Company")
+        h1 We'd love to get back to you, how can we do that?
+        input.formup-delta(type="text", name="email", value="", placeholder="Email")
+        input.formup-delta(type="text", name="phone", value="", placeholder="Phone Number")
 
-    h3 If you'd like to chat about your project, they crazy internet, or the weather in Prague in Autumn, we'll buy the coffee.  Just drop us a line.
+        h1 Tell us a little about your project
 
-  section#how
-  section#who
+        select.select-select.budget(name="budget")
+          option(value="$2k-$5k") $2k-$5k
+          option(value="$5k-$10k") $5k-$10k
+          option(value="$10k-$20k") $10k-$20k
+          option(value="$20k+") $20k+
+          option(value="Not Sure") Not Sure
 
-
-  form(action="http://localhost:1337/contact/new" method="post")
-    h1 We'd like to get to know you!
-    h1 What do you like to be called
-    input.formup-delta(type="text", name="firstname", value="", placeholder="First Name")
-    input.formup-delta(type="text", name="lastname", value="", placeholder="Last Name")
-    h1 What do you do?
-    input.formup-delta(type="text", name="job", value="", placeholder="Job")
-    input.formup-delta(type="text", name="company", value="", placeholder="Company")
-    h1 We'd love to get back to you, how can we do that?
-    input.formup-delta(type="text", name="email", value="", placeholder="Email")
-    input.formup-delta(type="text", name="phone", value="", placeholder="Phone Number")
-
-    h1 Tell us a little about your project
-    div
-      select.select-select.budget(name="budget")
-        option(value="$2k-$5k") $2k-$5k
-        option(value="$5k-$10k") $5k-$10k
-        option(value="$10k-$20k") $10k-$20k
-        option(value="$20k+") $20k+
-        option(value="Not Sure") Not Sure
-
-    input.formup-delta.pname(type="text", name="subject", value="", placeholder="Project Name")
-    div
-      textarea.formup-delta.message(type="text", name="message", value="", placeholder="Message")
-    input.formup-delta(type="submit", value="Submit")
-
-
-
-section.col.col-right
-  header
-    a.logo(href="#{ site_url }")
-      img(src="#{ site_url }/assets/img/logo.png")
-    nav.goodnav
-      a.what(href="#") What <span>we do for you</span>
-      a.how(href="#") How <span>we do it</span>
-      a.who(href="#") Who <span>we are</span>
-  .right-body
-    a.btn(href="http://twitter.com/share?text=Hey%20@thegoodcitizens,%20lets%20chat%20over%20coffee", target="_blank") Let's Have Coffee
+        input.formup-delta.pname(type="text", name="subject", value="", placeholder="Project Name")
+        div
+          textarea.formup-delta.message(type="text", name="message", value="", placeholder="Message")
+        input.button.large(type="submit", value="Submit")
+  .col.third.ocean
+    header
+      a.logo(href="#{ site_url }")
+        img(src="#{ site_url }/assets/img/logo.png")
+      nav.goodnav
+        a.what(href="#") What <span>we do for you</span>
+        a.how(href="#") How <span>we do it</span>
+        a.who(href="#") Who <span>we are</span>
+    .right-body
+      a.btn(href="http://twitter.com/share?text=Hey%20@thegoodcitizens,%20lets%20chat%20over%20coffee", target="_blank") Let's Have Coffee

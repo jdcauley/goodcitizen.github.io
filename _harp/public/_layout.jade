@@ -1,19 +1,22 @@
-!!!
-html(lang="en")
-  head
+!!! 5
+html(lang='en')
+head
     meta(charset='utf-8')
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title #{ iste_title }
-    link(rel="stylesheet", href="/assets/css/app.css")
-    link(rel="alternate", type="application/rss+xml", title="#{ site_title } RSS", href="/rss.xml")
-  body(class="page-#{ current.path[0] } #{ current.path.join('-') }")
+    title Tuktuk - Simple (but powerful) RWD Framework
+    //
+       Mobile Specific Metas
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    link(rel='stylesheet', href='assets/css/app.css')
+    // link(rel='stylesheet', href='assets/css/tuktuk.theme.css')
+
+  body
 
     != yield
 
-    footer
+    // ========================== FOOTER ==========================
+    footer.col
+      h1 this is a full width column
 
-    script(type="text/javascript", src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
-    script(src="#{ site_url }/assets/js/bootstrap.min.js").
-    script(src="#{ site_url }/assets/js/app.js").
-    script.
-      var s = skrollr.init({smoothScrolling: true});
+    script(type="text/javascript", src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js").
+    script(src='assets/js/app.js').
+    script(src='assets/js/select.js').

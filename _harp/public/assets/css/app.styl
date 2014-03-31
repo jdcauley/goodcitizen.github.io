@@ -1,104 +1,27 @@
-@import 'extend/_base'
+// *************************************
+//
+//   Application
+//
+// *************************************
 
-/* Variables */
+// -------------------------------------
+//   Core
+// -------------------------------------
 
-white = #fff
-darkblue = #34495e
-brand-primary = #b44647
-gray = #e7e7e7
-bg-primary = #98d7cb
-font-family-sans-serif = "Helvetica Neue", Helvetica, Arial, sans-serif
-font-family-serif = Georgia, "Times New Roman", Times, serif;
-font-base = font-family-sans-serif
+@import 'core/_reset'
+@import 'core/_settings'
+@import 'core/_helpers'
+@import 'core/_base'
+@import 'core/_content'
+@import 'core/_layout'
 
-/* Utilities */
+// -------------------------------------
+//   Modules
+// -------------------------------------
 
-/* Buttons */
-.btn
-  padding 8px 12px
-  color #dce4ec
-  text-decoration none
-  border 2px solid #dce4ec
-  -webkit-border-radius 5px
-  -moz-border-radius 5px
-  border-radius 5px
+// @import 'modules/_example'
 
+// -------------------------------------
+//   Inbox
+// -------------------------------------
 
-/* Html */
-
-body
-  font-size 16px
-  font-family font-base
-  font-weight 300
-
-h1,h2,h3,h4,h5,h6
-  color darkblue
-/* ====================
-    Header
-   ==================== */
-header
-  display block
-  margin-top -60px
-  opacity 0
-
-.logo
-  img
-    display block
-    margin-top -60px
-    margin-left auto
-    margin-right auto
-    max-width 280px
-    width 100%
-    height auto
-
-/* Nav */
-
-.ocean
-  position: fixed;
-  right: 0;
-  height: 100%;
-  color white
-  background url(../img/ocean.jpg)
-  background-size 100%
-
-.goodnav
-  max-width 280px
-  width 100%
-  margin-top 40px
-  margin-left auto
-  margin-right auto
-  a
-    font-size 25px
-    font-weight 600
-    padding 5px
-    display block
-    color white
-    text-decoration none
-    span
-      color gray
-      display none
-
-    &:hover
-      span
-        display inline
-    .active
-      span
-        display inline
-
-.main
-  background bg-primary
-
-.right-body
-  margin-top 150px
-
-
-/* Forms */
-
-::-webkit-input-placeholder
-  color darkblue
-:-moz-placeholder
-  color darkblue
-::-moz-placeholder
-  color darkblue
-:-ms-input-placeholder
-  color darkblue

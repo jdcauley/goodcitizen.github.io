@@ -1,0 +1,47 @@
+// *************************************
+//
+//   Base
+//   -> Base-level tags (body, p, etc.)
+//
+// *************************************
+
+html
+  font-size: base-font-size
+
+body
+  background: base-background
+  font-family: base-font-stack
+  font-size: 100%
+  line-height: base-line-height
+  color: base-color
+
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+p
+  font-size: font-size(base-font-size)
+
+// -------------------------------------
+//   Inline Content
+// -------------------------------------
+
+a
+  color: base-link-color
+  text-decoration: none
+  &:hover,
+  &:focus
+    text-decoration: underline
+
+// -------------------------------------
+//   Forms
+// -------------------------------------
+
+::-webkit-input-placeholder
+  color darkblue
+:-moz-placeholder
+  color darkblue
+::-moz-placeholder
+  color darkblue
+:-ms-input-placeholder
+  color darkblue

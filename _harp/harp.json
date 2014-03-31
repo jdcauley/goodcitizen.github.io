@@ -1,8 +1,8 @@
 {
   "domains": [""],
   "globals": {
-    "site_title": "My Harp Blog",
-    "twitter": "HarpPlatform",
+    "site_title": "Good Citizen | A digital studio.",
+    "twitter": "thegoodcitizens",
     "site_url": "",
     "disqus": {
       "enabled": false,

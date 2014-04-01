@@ -5,22 +5,28 @@
 //
 // *************************************
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html
   font-size: base-font-size
 
 body
-  background: base-background
   font-family: base-font-stack
   font-size: 100%
   line-height: base-line-height
   color: base-color
+  background: base-background
 
 // -------------------------------------
 //   Block Content
 // -------------------------------------
 
 p
-  font-size: font-size(base-font-size)
+  rem(base-font-size)
 
 // -------------------------------------
 //   Inline Content
@@ -38,10 +44,10 @@ a
 // -------------------------------------
 
 ::-webkit-input-placeholder
-  color darkblue
+  color brand-gray-light
 :-moz-placeholder
-  color darkblue
+  color brand-gray-light
 ::-moz-placeholder
-  color darkblue
+  color brand-gray-light
 :-ms-input-placeholder
-  color darkblue
+  color brand-gray-light

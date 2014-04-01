@@ -66,9 +66,13 @@ large = "all and (min-width: 50em)"
   height: 100px
   position: fixed
   top: 0
-  background-color: brand-gray-dark
+  background: url(/assets/img/bg-ocean.jpg)
   z-index: 100
+  .logo
+    display: none
+    border: none
   @media medium
+    padding: 20px
     width: 35%
     height: 100%
     right: 0
@@ -78,13 +82,24 @@ large = "all and (min-width: 50em)"
 // -------------------------------------
 
 .main
+  padding: 50px
   height: 100%
   position: relative
   top: 100px
-  background-color: brand-gray-light
   @media medium
     width: 65%
     top: 0
+
+.hero
+  .hero-logo
+    margin-bottom: 35px
+  .hero-title
+    rem(70px)
+    line-height: 1.3
+    letter-spacing: -.06rem
+  .hero-tagline 
+    font-family: monospace
+    rem(18px)
 
 // -------------------------------------
 //   Utilities

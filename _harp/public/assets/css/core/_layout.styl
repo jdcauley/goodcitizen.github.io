@@ -62,44 +62,65 @@ large = "all and (min-width: 50em)"
 // -------------------------------------
 
 .mast
+  padding: 15px
   width: 100%
-  height: 100px
   position: fixed
   top: 0
   background: url(/assets/img/bg-ocean.jpg)
   z-index: 100
   .logo
-    display: none
+    width: 150px
+    display: block
     border: none
+  .nav-primary,
+  .btn-coffee
+    display: none
   @media medium
     padding: 20px
     width: 35%
     height: 100%
     right: 0
+    .logo
+      width: 260px
+      opacity: 0
+      transition: opacity .3s ease-in-out
+      .js-peekaboo&
+        opacity: 1
 
 // -------------------------------------
 //   Main
 // -------------------------------------
 
 .main
-  padding: 50px
+  margin-top: 80px
+  padding: 20px
   height: 100%
-  position: relative
-  top: 100px
   @media medium
+    margin-top: 0
+    padding: 50px
     width: 65%
     top: 0
 
 .hero
   .hero-logo
-    margin-bottom: 35px
+    display: none
   .hero-title
-    rem(70px)
-    line-height: 1.3
+    margin: 0 0 2rem
+    max-width: 43.75rem
+    rem(35px)
+    line-height: 1.2
     letter-spacing: -.06rem
-  .hero-tagline 
+  .hero-tagline
+    max-width: 31rem
     font-family: monospace
     rem(18px)
+  @media medium
+    .hero-logo
+      margin-bottom: 30px
+      width: 260px
+      display: block
+    .hero-title
+      rem(70px)
 
 // -------------------------------------
 //   Utilities

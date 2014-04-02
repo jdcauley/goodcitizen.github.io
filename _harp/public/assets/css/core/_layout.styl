@@ -55,7 +55,7 @@ html, body
 
 // ----- MQ Variables ----- //
 medium = "all and (min-width: 43.75em)"
-large = "all and (min-width: 50em)"
+large = "all and (min-width: 75em)"
 
 // -------------------------------------
 //   Mast
@@ -69,7 +69,7 @@ large = "all and (min-width: 50em)"
   background: url(/assets/img/bg-ocean.jpg)
   z-index: 100
   .logo
-    width: 150px
+    width: 9.375rem
     display: block
     border: none
   .nav-primary,
@@ -81,7 +81,7 @@ large = "all and (min-width: 50em)"
     height: 100%
     right: 0
     .logo
-      width: 260px
+      max-width: 16.25rem
       opacity: 0
       transition: opacity .3s ease-in-out
       .js-peekaboo&
@@ -106,8 +106,7 @@ large = "all and (min-width: 50em)"
     display: none
   .hero-title
     margin: 0 0 2rem
-    max-width: 43.75rem
-    rem(35px)
+    rem(29px)
     line-height: 1.2
     letter-spacing: -.06rem
   .hero-tagline
@@ -117,9 +116,13 @@ large = "all and (min-width: 50em)"
   @media medium
     .hero-logo
       margin-bottom: 30px
-      width: 260px
+      max-width: 16.25rem
       display: block
     .hero-title
+      rem(40px)
+  @media large
+    .hero-title
+      max-width: 43.75rem
       rem(70px)
 
 // -------------------------------------

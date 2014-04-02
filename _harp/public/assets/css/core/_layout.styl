@@ -69,7 +69,7 @@ large = "all and (min-width: 75em)"
   background: url(/assets/img/bg-ocean.jpg)
   z-index: 100
   .logo
-    width: 9.375rem
+    max-width: 9.375rem
     display: block
     border: none
   .nav-primary,
@@ -81,11 +81,21 @@ large = "all and (min-width: 75em)"
     height: 100%
     right: 0
     .logo
+      margin: 30px 0
       max-width: 16.25rem
       opacity: 0
       transition: opacity .3s ease-in-out
       .js-peekaboo&
         opacity: 1
+    .nav-primary,
+    .btn-coffee
+      display: block
+      font-family: proxima
+    .nav-primary
+      a
+        rem(36px)
+        font-weight: 900
+        letter-spacing: -.06rem
 
 // -------------------------------------
 //   Main

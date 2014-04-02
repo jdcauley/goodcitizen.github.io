@@ -3,11 +3,11 @@ main.main
     img.hero-logo(src='assets/img/logo.svg', alt='Good Citizen')
     h1.hero-title We create compelling digital experiences that put people first.
     p.hero-tagline
-      | See 
+      | See
       a(href='#') what
-      |  we can do for you, 
+      |  we can do for you,
       a(href='#') how
-      |  we go about doing it, and 
+      |  we go about doing it, and
       a(href='#') who
       |  you would be working with.
   section.content
@@ -17,3 +17,31 @@ main.main
     p For now, here’s what you can see for yourself:
     p The primary focus is on presenting the typefaces in a playful setting, making it fun to find and select them. We use webfonts wherever possible, to provide a wider range of attributes to test and assess.
     p The family pages are now at the heart of the next FontShop design. It consists of many amusing modules to play with. Still, it covers all facets and capabilities of each typeface, from a broad overview of each family down to the details of individual glyphs.
+
+
+.form
+  form(action="http://forms.wearegoodcitizen.com/contact/new" method="post")
+        h1 We'd like to get to know you!
+        h1 What do you like to be called
+        input.formup-delta(type="text", name="firstname", value="", placeholder="First Name")
+        input.formup-delta(type="text", name="lastname", value="", placeholder="Last Name")
+        h1 What do you do?
+        input.formup-delta(type="text", name="job", value="", placeholder="Job")
+        input.formup-delta(type="text", name="company", value="", placeholder="Company")
+        h1 We'd love to get back to you, how can we do that?
+        input.formup-delta(type="text", name="email", value="", placeholder="Email")
+        input.formup-delta(type="text", name="phone", value="", placeholder="Phone Number")
+
+        h1 Tell us a little about your project
+
+        select.select-select.budget(name="budget")
+          option(value="$2k-$5k") $2k-$5k
+          option(value="$5k-$10k") $5k-$10k
+          option(value="$10k-$20k") $10k-$20k
+          option(value="$20k+") $20k+
+          option(value="Not Sure") Not Sure
+
+        input.formup-delta.pname(type="text", name="subject", value="", placeholder="Project Name")
+        div
+          textarea.formup-delta.message(type="text", name="message", value="", placeholder="Message")
+        input.button.large(type="submit", value="Submit")

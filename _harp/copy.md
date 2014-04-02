@@ -30,3 +30,21 @@ Smartphone and tablets are quickly dominating the internet, so we design and bui
 ## Hi, We are Good Citizen and we'd like to buy you a coffee 
 
 We're a digital studio in North Carolina, focusted on meeting our clients needs in ways they don't expect.
+
+### Services
+
+#### Comprehensive Digital Strategy
+We offer comprehesive digital strategy to our clients, we're prepared to serve as a full digital department for you. We will plan, build execute across the digital space.
+
+#### Site Development
+
+We use a variety of content management tools but we select the tools that best fit you. We don't have a favorite, be have built sites on top of WordPress, Shopify, SquareSpace and more.
+
+#### Ecommerce & Retail
+We love ecommerce, and look forward to building incredible shopping experiences for you. We have tons of ideas about enhancing retail online and in stores.
+
+#### Email
+The largest percentage email interactions in 2013 took place on mobile devices. Get your message to customers no matter what device they use and increase the effectiveness of you email efforts.
+
+#### Startup Development & Consultation
+If you are a startup looking for some help with user experience, application design, front-end develop, or anything else, we'd love to help.

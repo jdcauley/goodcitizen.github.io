@@ -1,0 +1,61 @@
+// *************************************
+//
+//   Navbars
+//   -> Stacked and inline navigation bars
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.nav 
+  a
+    text-decoration: none
+    border: none
+  ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+    li
+      margin: 0
+      padding: 0
+
+// -------------------------------------
+//   Mixins
+// -------------------------------------
+
+// Mixin: Inline List
+// For when you need your list to be horizontal. Pass it the spacing you want between list
+// elements, whatever units you'd like. Defaults to 20px
+// ex. inline-list
+// ex. inline-list: 15px
+
+inline-list(spacing = 20px)
+  margin: 0
+  padding: 0
+  group()
+
+  li
+    margin-right: spacing
+    float: left
+    list-style-type: none
+
+  li:last-child
+    margin-right: 0
+
+// Mixin: Reset List
+// If you're tired of all the list shenanigans and want to get rid of them for this special
+// list you're working on, this is your guy. Resets the margins, padding, and style.
+// ex. reset-list()
+
+reset-list()
+  margin: 0
+  padding: 0
+
+  li
+    margin: 0
+    padding: 0
+    float: none
+    list-style-type: none
+    

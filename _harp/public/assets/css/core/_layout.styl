@@ -62,7 +62,7 @@ large = "all and (min-width: 75em)"
 // -------------------------------------
 
 .mast
-  padding: 15px
+  padding: .9375rem
   width: 100%
   position: fixed
   top: 0
@@ -73,40 +73,62 @@ large = "all and (min-width: 75em)"
     display: block
     border: none
   .nav-primary,
-  .btn-coffee
+  .nav-secondary
     display: none
   @media medium
-    padding: 20px
+    padding: 1.25rem 1.875rem
     width: 35%
     height: 100%
     right: 0
     .logo
-      margin: 30px 0
+      margin: 1.875rem 0
       max-width: 16.25rem
       opacity: 0
       transition: opacity .3s ease-in-out
       .js-peekaboo&
         opacity: 1
     .nav-primary,
-    .btn-coffee
+    .nav-secondary
       display: block
       font-family: proxima
     .nav-primary
+      margin-bottom: 1.875rem
       a
         rem(36px)
         font-weight: 900
         letter-spacing: -.06rem
+        color: rgba(white,.75)
+        transition: all .3s ease-in-out
+        &:hover
+          color: rgba(white,1)
+          span
+            opacity: 1
+        span
+          color: rgba(white,.25)
+          opacity: 0
+    .nav-secondary
+      li
+        margin-bottom: .5rem
+      a
+        rem(24px)
+        font-weight: 700
+        color: rgba(white,.75)
+        transition: all .3s ease-in-out
+        border-bottom: 3px solid rgba(white,.75)
+        &:hover
+          color: rgba(white,1)
+          border-bottom: 3px solid rgba(white,1)
 
 // -------------------------------------
 //   Main
 // -------------------------------------
 
 .main
-  margin-top: 80px
-  padding: 20px
+  margin-top: 5rem
+  padding: 1.25rem
   @media medium
     margin-top: 0
-    padding: 50px
+    padding: 3.125rem
     width: 65%
     top: 0
 
@@ -124,7 +146,7 @@ large = "all and (min-width: 75em)"
     rem(18px)
   @media medium
     .hero-logo
-      margin-bottom: 30px
+      margin-bottom: 1.875rem
       max-width: 16.25rem
       display: block
     .hero-title

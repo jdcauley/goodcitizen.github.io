@@ -18,7 +18,6 @@ main.main
         img(src="#{ item.img_url }")
         h5 #{ item.title }
 
-
     :markdown
       ## How do we do it?
       #### We do it Together
@@ -41,7 +40,7 @@ main.main
       #### Startup Development & Consultation
       If you are a startup looking for some help with user experience, application design, front-end develop, or anything else, we'd love to help.
 
-  form(action="http://forms.wearegoodcitizen.com/contact/new" method="post")
+  form#project-planner(action="http://forms.wearegoodcitizen.com/contact/new" method="post")
         input.formup-delta(type="text", name="firstname", value="", placeholder="First Name")
         input.formup-delta(type="text", name="lastname", value="", placeholder="Last Name")
         input.formup-delta(type="text", name="job", value="", placeholder="Job")

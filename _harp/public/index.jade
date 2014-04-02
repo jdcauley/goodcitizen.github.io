@@ -11,29 +11,31 @@ main.main
       a(href='#') who
       |  you would be working with.
   section.content
-    h2 This is a Level 2 Heading
-    p This is the starting ground where we’re building the next FontShop website. It’s in its early stages and has not yet blossomed into a full webshop, but we invite you to delve in and accompany us on our journey to its completion in the coming months.
-    p With the help of our partner typefoundries, we’re exploring fresh and innovative ways to re-engineer the whole experience of finding the perfect fonts, right here in this space.
-    p For now, here’s what you can see for yourself:
-    p The primary focus is on presenting the typefaces in a playful setting, making it fun to find and select them. We use webfonts wherever possible, to provide a wider range of attributes to test and assess.
-    p The family pages are now at the heart of the next FontShop design. It consists of many amusing modules to play with. Still, it covers all facets and capabilities of each typeface, from a broad overview of each family down to the details of individual glyphs.
+    :markdown
+      ## What do we do?
+      Well, we love creating digital products and servces that people enjoy and that solve real-world problems.
+      Obviously, we're into technology, we wouldn't be able to creating engaging new experiences if we weren't, but we love people.
+      People are the most important part of what we do, because we're here to solve problems for humans.
+      ### Portfolio
+      Here's a few examples of our work, we can't show you everything we've done because we often work under NDA. We can say that last year we launched more than 50 projects.
+      ## How do we do it?
+      #### We do it Together
+      We're solving problems and creating products for you, so we want to know how you think, how you work, and what you need. So, communication is key, we're going to ask a lot of questions, so that we can deliver what you need even if its not what you expected.
+      #### We do it Content First.
+      Our web products are designed to be effective. We're here to help you communicate to your audience. So, we shape designs around the what you are communicating, your content.
+      #### We do it Mobile First.
+      Smartphone and tablets are quickly dominating the internet, so we design and build products that look and work great no matter what device you're using.
+      # Hi, we'd love to buy you a coffee
+      We're a digital studio in North Carolina, focusted on meeting our clients needs in ways they don't expect.
 
 
-.form
   form(action="http://forms.wearegoodcitizen.com/contact/new" method="post")
-        h1 We'd like to get to know you!
-        h1 What do you like to be called
         input.formup-delta(type="text", name="firstname", value="", placeholder="First Name")
         input.formup-delta(type="text", name="lastname", value="", placeholder="Last Name")
-        h1 What do you do?
         input.formup-delta(type="text", name="job", value="", placeholder="Job")
         input.formup-delta(type="text", name="company", value="", placeholder="Company")
-        h1 We'd love to get back to you, how can we do that?
         input.formup-delta(type="text", name="email", value="", placeholder="Email")
         input.formup-delta(type="text", name="phone", value="", placeholder="Phone Number")
-
-        h1 Tell us a little about your project
-
         select.select-select.budget(name="budget")
           option(value="$2k-$5k") $2k-$5k
           option(value="$5k-$10k") $5k-$10k

@@ -17,15 +17,14 @@ Here's a few examples of our work, we can't show you everything we've done becau
 
 ## How do we do it?
 
-#### We do it for You
+#### We do it Together
 We're solving problems and creating products for you, so we want to know how you think, how you work, and what you need. So, communication is key, we're going to ask a lot of questions, so that we can deliver what you need even if its not what you expected.
 
+#### We do it Content First.
+Our web products are designed to be effective. We're here to help you communicate to your audience. So, we shape designs around the what you are communicating, your content.  
+
 #### We do it Mobile First.
-Smartphone and tablets are quickly dominating the internet, so we build products that look and work great no matter what device you're using.
-
-#### We do it 
-
-
+Smartphone and tablets are quickly dominating the internet, so we design and build products that look and work great no matter what device you're using. 
 
 
 ## Hi, We are Good Citizen and we'd like to buy you a coffee 

@@ -2,14 +2,8 @@ main.main
   section.hero
     img.hero-logo(src='assets/img/logo.svg', alt='Good Citizen')
     h1.hero-title We create compelling digital experiences that put people first.
-    p.hero-tagline
-      | See
-      a(href='#') what
-      |  we can do for you,
-      a(href='#') how
-      |  we go about doing it, and
-      a(href='#') who
-      |  you would be working with.
+    p.hero-tagline See <a href="#what">what</a> we can do for you, <a href="#how">how</a> we go about it, and <a href="who">who'd</a> you work with.
+
   section.content
     :markdown
       ## What do we do?
@@ -18,6 +12,14 @@ main.main
       People are the most important part of what we do, because we're here to solve problems for humans.
       ### Portfolio
       Here's a few examples of our work, we can't show you everything we've done because we often work under NDA. We can say that last year we launched more than 50 projects.
+
+    each item, slug in public.portfolio._data
+      a.post-box(href="#{ item.project_url }", target="_blank")
+        img(src="#{ item.img_url }")
+        h5 #{ item.title }
+
+
+    :markdown
       ## How do we do it?
       #### We do it Together
       We're solving problems and creating products for you, so we want to know how you think, how you work, and what you need. So, communication is key, we're going to ask a lot of questions, so that we can deliver what you need even if its not what you expected.

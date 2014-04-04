@@ -18,7 +18,7 @@ $("#project-planner").submit(function(e){
           $( ".form-wrap" ).hide("slow");
           $( ".form-success").show("slow");
         } else {
-          alert(r.error);
+          $( ".form-fail" ).hide("slow");
         }
       });
     e.preventDefault(); //STOP default action

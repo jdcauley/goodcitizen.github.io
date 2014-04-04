@@ -7,7 +7,7 @@ img.pic-divider.pic-divider-1(src='assets/img/pic-1.jpg')
 
 section#what.content.content-what
   h2 What do we do?
-  p We get asked this a lot. Single taglines and elevator statements can sound hollow and contrived. So here is the longer explanation… 
+  p We get asked this a lot. Single taglines and elevator statements can sound hollow and contrived. So here is the longer explanation…
   p Good Citizen is a digital (design and development) studio.
   p We love creating digital products and services that people enjoy and that solve real-world problems. Obviously, we're into design and technology, we wouldn't be able to creating engaging new experiences if we weren't, but we love people. People are the most important part of what we do, because we're here to solve problems for humans. By focusing on strategy, design, and technology, we create experiences that meet the needs of our clients, and their customers, in ways that are delightful and unexpected.
   .services
@@ -73,6 +73,10 @@ section#who.content.content-who
 section#work-together.content.content-work-together
   :markdown
     ## Hi, we'd love to work together, or just connect.
+  .form-fail
+    :markdown
+      ### Oops!
+      Something went wrong.
 
   .form-wrap
     form#project-planner(action="http://forms.wearegoodcitizen.com/contact/new" method="post")
@@ -88,7 +92,6 @@ section#work-together.content.content-work-together
         option(value="$10k-$20k") $10k-$20k
         option(value="$20k+") $20k+
         option(value="Not Sure") Not Sure
-
       input.formup-delta.pname(type="text", name="subject", value="", placeholder="Project Name")
       div
         textarea.formup-delta.message(type="text", name="message", value="", placeholder="Message")

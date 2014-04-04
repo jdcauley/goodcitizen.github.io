@@ -16,6 +16,10 @@ html, body
 //   Grid
 // -------------------------------------
 
+// ----- MQ Variables ----- //
+medium = "all and (min-width: 43.75em)"
+large = "all and (min-width: 75em)"
+
 .container
   margin: 0 auto
   width: 90%
@@ -27,7 +31,7 @@ html, body
 .column
   + .column
     margin-top: 0.5em
-  @media screen and (min-width: 52.5em)
+  @media large
     margin-left: 5%
     float: left
     + .column { margin-top: 0 }
@@ -52,10 +56,6 @@ html, body
     padding: 2em
     font-size: 1.2rem
     background-color: #ccc
-
-// ----- MQ Variables ----- //
-medium = "all and (min-width: 43.75em)"
-large = "all and (min-width: 75em)"
 
 // -------------------------------------
 //   Mast
@@ -101,11 +101,8 @@ large = "all and (min-width: 75em)"
         transition: all .3s ease-in-out
         &:hover
           color: rgba(white,1)
-          span
-            opacity: 1
         span
-          color: rgba(white,.25)
-          opacity: 0
+          display: none
     .nav-secondary
       li
         margin-bottom: .5rem
@@ -118,6 +115,19 @@ large = "all and (min-width: 75em)"
         &:hover
           color: rgba(white,1)
           border-bottom: 3px solid rgba(white,1)
+  @media all and (min-width:66.25em)
+    .nav-primary
+      a
+        &:hover
+          color: rgba(white,1)
+          span
+            opacity: 1
+        span
+          display: inline
+          color: rgba(white,.25)
+          opacity: 0
+          transition: all .3s ease-in-out
+
 
 // -------------------------------------
 //   Main
@@ -133,6 +143,8 @@ large = "all and (min-width: 75em)"
     top: 0
 
 .hero
+  margin-top: 5rem
+  padding: 1.25rem
   .hero-logo
     display: none
   .hero-title
@@ -141,10 +153,13 @@ large = "all and (min-width: 75em)"
     line-height: 1.2
     letter-spacing: -.06rem
   .hero-tagline
-    max-width: 31rem
     font-family: monospace
     rem(18px)
   @media medium
+    margin-top: 0
+    padding: 3.125rem
+    width: 65%
+    top: 0
     .hero-logo
       margin-bottom: 1.875rem
       max-width: 16.25rem
@@ -155,6 +170,60 @@ large = "all and (min-width: 75em)"
     .hero-title
       max-width: 43.75rem
       rem(70px)
+    .hero-tagline
+      max-width: 43.75rem
+
+.pic-divider
+  max-width: 65%
+
+.content
+  margin-bottom: .5rem
+  padding: 1.25rem
+  @media medium
+    margin-bottom: 1rem
+    padding: 3.125rem
+    width: 65%
+    max-width: 45rem
+
+.services
+  margin: 2.5rem 0 0
+  padding: 2.5rem 0
+  border: 1px solid rgba(brand-gray,.25)
+  border-width: 1px 0
+
+.service-list
+  h5
+    margin-bottom: 0
+  ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+    font-family: proxima-nova
+
+.portfolio
+  margin: 2.5rem 0
+
+.portfolio-item
+  width: 50%
+  width: -moz-calc(50% - 1px);
+  width: -o-calc(50% - 1px);
+  width: -webkit-calc(50% - 1px);
+  width: calc(50% - 1px);
+  margin: 0 1px 1px 0;
+  display: inline-block
+  text-align: center
+  border: 10px solid rgba(white,.5)
+  &:hover
+    border: 10px solid white
+  h5
+    margin-bottom: 0
+    padding: 1rem 0
+    background: rgba(brand-gray,.2)
+
+
+.content-how
+  h3
+    margin-bottom: 0
 
 // -------------------------------------
 //   Utilities

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 section.hero
   img.hero-logo(src='assets/img/logo.svg', alt='Good Citizen')
   h1.hero-title We create compelling digital experiences that put people first.
@@ -92,3 +93,69 @@ section#work-together.content.content-work-together
     div
       textarea.formup-delta.message(type="text", name="message", value="", placeholder="Message")
     input.button.large(type="submit", value="Submit")
+=======
+main.main
+  section.hero
+    img.hero-logo(src='assets/img/logo.svg', alt='Good Citizen')
+    h1.hero-title We create compelling digital experiences that put people first.
+    p.hero-tagline See <a href="#what">what</a> we can do for you, <a href="#how">how</a> we go about it, and <a href="who">who'd</a> you work with.
+
+  section.content
+    :markdown
+      ## What do we do?
+      Well, we love creating digital products and servces that people enjoy and that solve real-world problems.
+      Obviously, we're into technology, we wouldn't be able to creating engaging new experiences if we weren't, but we love people.
+      People are the most important part of what we do, because we're here to solve problems for humans.
+      ### Services
+      #### Comprehensive Digital Strategy
+      We offer comprehesive digital strategy to our clients, we're prepared to serve as a full digital department for you. We will plan, build execute across the digital space.
+      #### Site Development
+      We use a variety of content management tools but we select the tools that best fit you. We don't have a favorite, be have built sites on top of WordPress, Shopify, SquareSpace and more.
+      #### Ecommerce & Retail
+      We love ecommerce, and look forward to building incredible shopping experiences for you. We have tons of ideas about enhancing retail online and in stores.
+      #### Email
+      The largest percentage email interactions in 2013 took place on mobile devices. Get your message to customers no matter what device they use and increase the effectiveness of you email efforts.
+      #### Startup Development & Consultation
+      If you are a startup looking for some help with user experience, application design, front-end develop, or anything else, we'd love to help.
+      ### Portfolio
+      Here's a few examples of our work, we can't show you everything we've done because we often work under NDA. We can say that last year we launched more than 50 projects.
+
+    each item, slug in public.portfolio._data
+      a.post-box(href="#{ item.project_url }", target="_blank")
+        img(src="#{ item.img_url }")
+        h5 #{ item.title }
+
+    :markdown
+      ## How do we do it?
+      #### We do it Together
+      We're solving problems and creating products for you, so we want to know how you think, how you work, and what you need. So, communication is key, we're going to ask a lot of questions, so that we can deliver what you need even if its not what you expected.
+      #### We do it Content First.
+      Our web products are designed to be effective. We're here to help you communicate to your audience. So, we shape designs around the what you are communicating, your content.
+      #### We do it Mobile First.
+      Smartphone and tablets are quickly dominating the internet, so we design and build products that look and work great no matter what device you're using.
+      # Hi, we'd love to buy you a coffee
+      We're a digital studio in North Carolina, focusted on meeting our clients needs in ways they don't expect.
+    .form-wrap
+      form#project-planner(action="http://forms.wearegoodcitizen.com/contact/new" method="post")
+        input.formup-delta(type="text", name="firstname", value="", placeholder="First Name")
+        input.formup-delta(type="text", name="lastname", value="", placeholder="Last Name")
+        input.formup-delta(type="text", name="job", value="", placeholder="Job")
+        input.formup-delta(type="text", name="company", value="", placeholder="Company")
+        input.formup-delta(type="text", name="email", value="", placeholder="Email")
+        input.formup-delta(type="text", name="phone", value="", placeholder="Phone Number")
+        select.select-select.budget(name="budget")
+          option(value="$2k-$5k") $2k-$5k
+          option(value="$5k-$10k") $5k-$10k
+          option(value="$10k-$20k") $10k-$20k
+          option(value="$20k+") $20k+
+          option(value="Not Sure") Not Sure
+
+        input.formup-delta.pname(type="text", name="subject", value="", placeholder="Project Name")
+        div
+          textarea.formup-delta.message(type="text", name="message", value="", placeholder="Message")
+        input.button.large(type="submit", value="Submit")
+    .form-success
+      :markdown
+        #### Thanks
+        We look forward to speaking with you soon.
+>>>>>>> fcb65f6ccfaa4c3d35a542d406c95bf7877fe648

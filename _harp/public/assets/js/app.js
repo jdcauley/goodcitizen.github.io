@@ -3,5 +3,24 @@
 /* End Skrollr */
 
 (function($) {
-  
+
 })(jQuery);
+
+$("#project-planner").submit(function(e){
+    var postData = $(this).serializeArray();
+    var formURL = $(this).attr("action");
+    $.ajax({
+        url : formURL,
+        type: "POST",
+        data : postData,
+      }).done(function(r){
+        if (r.success){
+          $( ".form-wrap" ).hide("slow");
+          $( ".form-success").show("slow");
+        } else {
+          alert(r.error);
+        }
+      });
+    e.preventDefault(); //STOP default action
+    e.unbind(); //unbind. to stop multiple form submit.
+});

@@ -39,22 +39,22 @@ main.main
       Smartphone and tablets are quickly dominating the internet, so we design and build products that look and work great no matter what device you're using.
       # Hi, we'd love to buy you a coffee
       We're a digital studio in North Carolina, focusted on meeting our clients needs in ways they don't expect.
+    .form-wrap
+      form#project-planner(action="http://forms.wearegoodcitizen.com/contact/new" method="post")
+        input.formup-delta(type="text", name="firstname", value="", placeholder="First Name")
+        input.formup-delta(type="text", name="lastname", value="", placeholder="Last Name")
+        input.formup-delta(type="text", name="job", value="", placeholder="Job")
+        input.formup-delta(type="text", name="company", value="", placeholder="Company")
+        input.formup-delta(type="text", name="email", value="", placeholder="Email")
+        input.formup-delta(type="text", name="phone", value="", placeholder="Phone Number")
+        select.select-select.budget(name="budget")
+          option(value="$2k-$5k") $2k-$5k
+          option(value="$5k-$10k") $5k-$10k
+          option(value="$10k-$20k") $10k-$20k
+          option(value="$20k+") $20k+
+          option(value="Not Sure") Not Sure
 
-    form#project-planner(action="http://forms.wearegoodcitizen.com/contact/new" method="post")
-      input.formup-delta(type="text", name="firstname", value="", placeholder="First Name")
-      input.formup-delta(type="text", name="lastname", value="", placeholder="Last Name")
-      input.formup-delta(type="text", name="job", value="", placeholder="Job")
-      input.formup-delta(type="text", name="company", value="", placeholder="Company")
-      input.formup-delta(type="text", name="email", value="", placeholder="Email")
-      input.formup-delta(type="text", name="phone", value="", placeholder="Phone Number")
-      select.select-select.budget(name="budget")
-        option(value="$2k-$5k") $2k-$5k
-        option(value="$5k-$10k") $5k-$10k
-        option(value="$10k-$20k") $10k-$20k
-        option(value="$20k+") $20k+
-        option(value="Not Sure") Not Sure
-
-      input.formup-delta.pname(type="text", name="subject", value="", placeholder="Project Name")
-      div
-        textarea.formup-delta.message(type="text", name="message", value="", placeholder="Message")
-      input.button.large(type="submit", value="Submit")
+        input.formup-delta.pname(type="text", name="subject", value="", placeholder="Project Name")
+        div
+          textarea.formup-delta.message(type="text", name="message", value="", placeholder="Message")
+        input.button.large(type="submit", value="Submit")

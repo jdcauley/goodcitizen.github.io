@@ -8,8 +8,8 @@ img.pic-divider.pic-divider-1(src='assets/img/pic-1.jpg')
 section#what.content.content-what
   h2 What do we do?
   p We get asked this a lot. Single taglines and elevator statements can sound hollow and contrived. So here is the longer explanation…
-  p Good Citizen is a digital (design and development) studio.
-  p We love creating digital products and services that people enjoy and that solve real-world problems. Obviously, we're into design and technology, we wouldn't be able to creating engaging new experiences if we weren't, but we love people. People are the most important part of what we do, because we're here to solve problems for humans. By focusing on strategy, design, and technology, we create experiences that meet the needs of our clients, and their customers, in ways that are delightful and unexpected.
+  p Good Citizen is a digital <em style="color: rgba(0,0,0,.3);">(design and development)</em> studio.
+  p We love creating digital products and services that people enjoy and that solve real-world problems. Obviously, we're into design and technology, we wouldn't be able to create engaging new experiences if we weren't, but we love people. People are the most important part of what we do, because we're here to solve problems for humans. By focusing on strategy, design, and technology, we create experiences that meet the needs of our clients, and their customers, in ways that are delightful and unexpected.
   .services
     h3 Services
     .row
@@ -77,26 +77,20 @@ section#work-together.content.content-work-together
     :markdown
       ### Oops!
       Something went wrong.
-
   .form-wrap
     form#project-planner(action="http://forms.wearegoodcitizen.com/contact/new" method="post")
-      input.formup-delta(type="text", name="firstname", value="", placeholder="First Name")
-      input.formup-delta(type="text", name="lastname", value="", placeholder="Last Name")
-      input.formup-delta(type="text", name="job", value="", placeholder="Job")
-      input.formup-delta(type="text", name="company", value="", placeholder="Company")
-      input.formup-delta(type="text", name="email", value="", placeholder="Email")
-      input.formup-delta(type="text", name="phone", value="", placeholder="Phone Number")
-      select.select-select.budget(name="budget")
+      input(type="text", name="name", value="", placeholder="Your Name")
+      input(type="text", name="email", value="", placeholder="Email")
+      input(type="text", name="phone", value="", placeholder="Phone Number")
+      textarea(type="text", name="message", value="", placeholder="Message")
+      select(name="budget")
         option(value="$2k-$5k") $2k-$5k
         option(value="$5k-$10k") $5k-$10k
         option(value="$10k-$20k") $10k-$20k
         option(value="$20k+") $20k+
         option(value="Not Sure") Not Sure
-      input.formup-delta.pname(type="text", name="subject", value="", placeholder="Project Name")
-      div
-        textarea.formup-delta.message(type="text", name="message", value="", placeholder="Message")
-      input.button.large(type="submit", value="Submit")
+      input(type="submit", value="Submit")
   .form-success
     :markdown
-      #### Thanks
+      ### Thanks
       We look forward to speaking with you soon.

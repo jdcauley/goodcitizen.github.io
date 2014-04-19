@@ -48,7 +48,10 @@ section#what.content.content-what
       each item, slug in public.portfolio._data
         a.portfolio-item(href="#{ item.project_url }", target="_blank")
           img(src="#{ item.img_url }")
-          h5 #{ item.title }
+          .portfolio-info
+            h5 #{ item.title }
+            h6 #{ item.description }
+            p View project &rarr;
 
 img.pic-divider.pic-divider-2(src='assets/img/pic-2.jpg')
 

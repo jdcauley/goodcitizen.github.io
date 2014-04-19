@@ -212,17 +212,28 @@ large = "all and (min-width: 75em)"
   width: calc(50% - 25px);
   position: relative
   display: inline-block
-  text-align: center
   border: 10px solid rgba(white,.5)
   &:hover
     border: 10px solid white
-  h5
-    margin-bottom: 0
+    .portfolio-info
+      opacity: 1
+  .portfolio-info
     padding: 1rem
+    width: 100%
+    height: 100%
     position: absolute
     left: 0
-    bottom: 0
-    background: rgba(white,.9)
+    top: 0
+    color: white
+    background: rgba(darken(brand-mint,20),.85)
+    opacity: 0
+    transition: opacity .3s ease-in-out
+    p
+      position: absolute
+      bottom: 1%
+      rem(16px)
+      font-family: proxima-nova
+      font-weight: 900
 
 .content-how
   h3

@@ -216,18 +216,20 @@ large = "all and (min-width: 75em)"
   &:hover
     border: 10px solid white
     .portfolio-info
+      padding 1rem
       opacity: 1
   .portfolio-info
-    padding: 1rem
+    padding: 10% 1rem 0
     width: 100%
     height: 100%
     position: absolute
     left: 0
     top: 0
+    overflow hidden
     color: white
     background: rgba(darken(brand-mint,20),.85)
     opacity: 0
-    transition: opacity .3s ease-in-out
+    transition: all .45s ease-out
     p
       position: absolute
       bottom: 1%

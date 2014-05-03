@@ -10,7 +10,7 @@
 // -------------------------------------
 
 html, body
-  height: 100% // needed for mast to be 100% height
+  height 100% // needed for mast to be 100% height
 
 // -------------------------------------
 //   Grid
@@ -21,112 +21,113 @@ medium = "all and (min-width: 43.75em)"
 large = "all and (min-width: 75em)"
 
 .container
-  margin: 0 auto
-  width: 90%
-  max-width: 1200px
+  margin 0 auto
+  width 90%
+  max-width 1200px
 
 .row
-  overflow: hidden // clearfix
+  overflow hidden // clearfix
 
 .column
   + .column
-    margin-top: 0.5em
+    margin-top 0.5em
   @media large
-    margin-left: 5%
-    float: left
-    + .column { margin-top: 0 }
-    &:first-child { margin-left: 0 }
-    &.full { width: 100% }
-    &.half { width: 47.5% }
-    &.two-thirds { width: 65% }
-    &.one-third { width: 30% }
-    &.one-fourth { width: 21.25% }
-    &.three-fourths { width: 73.75% }
+    margin-left 5%
+    float left
+    + .column { margin-top 0 }
+    &:first-child { margin-left 0 }
+    &.full { width 100% }
+    &.half { width 47.5% }
+    &.two-thirds { width 65% }
+    &.one-third { width 30% }
+    &.one-fourth { width 21.25% }
+    &.three-fourths { widows 73.75% }
     &.full-narrow
-      margin-left: 17.5% !important
-      width: 65%
-    &.flow-opposite { float: right }
+      margin-left 17.5% !important
+      width 65%
+    &.flow-opposite
+      float right
 
 .grid
   .row
-    margin-top: 1.5em
+    margin-top 1.5em
     &:first-child
-      margin-top: 0
+      margin-top 0
   .column
-    padding: 2em
-    font-size: 1.2rem
-    background-color: #ccc
+    padding 2em
+    font-size 1.2rem
+    background-color #ccc
 
 // -------------------------------------
 //   Mast
 // -------------------------------------
 
 .mast
-  padding: .9375rem
-  width: 100%
-  position: fixed
-  top: 0
-  background: url(/assets/img/bg-ocean.jpg)
-  z-index: 100
+  padding .9375rem
+  width 100%
+  position fixed
+  top 0
+  background url(/assets/img/bg-ocean.jpg)
+  z-index 100
   .logo
-    max-width: 9.375rem
-    display: block
-    border: none
+    max-width 9.375rem
+    display block
+    border none
   .nav-primary,
   .nav-secondary
-    display: none
+    display none
   @media medium
-    padding: 1.25rem 1.875rem
-    width: 35%
-    height: 100%
-    right: 0
+    padding 1.25rem 1.875rem
+    width 35%
+    height 100%
+    right 0
     .logo
-      margin: 1.875rem 0
-      max-width: 16.25rem
-      opacity: 0
-      transition: opacity .5s ease-in-out
+      margin 1.875rem 0
+      max-width 16.25rem
+      opacity 0
+      transition opacity .5s ease-in-out
       &.js-peekaboo
-        opacity: 1
+        opacity 1
     .nav-primary,
     .nav-secondary
-      display: block
-      font-family: proxima
+      display block
+      font-family proxima
     .nav-primary
-      margin-bottom: 1.875rem
+      margin-bottom 1.875rem
       a
         rem(36px)
-        font-weight: 900
-        letter-spacing: -.06rem
-        color: rgba(white,.75)
-        transition: all .3s ease-in-out
+        font-weight 900
+        letter-spacing -.06rem
+        color rgba(white,.75)
+        transition all .3s ease-in-out
         &:hover
-          color: rgba(white,1)
+          color rgba(white,1)
         span
-          display: none
+          display none
     .nav-secondary
       li
-        margin-bottom: .5rem
+        margin-bottom .5rem
       a
         rem(24px)
-        font-weight: 700
-        color: rgba(white,.75)
-        transition: all .3s ease-in-out
-        border-bottom: 3px solid rgba(white,.75)
+        font-weight 700
+        color rgba(white,.75)
+        transition all .3s ease-in-out
+        border-bottom 3px solid rgba(white,.75)
         &:hover
-          color: rgba(white,1)
-          border-bottom: 3px solid rgba(white,1)
+          color rgba(white,1)
+          border-bottom 3px solid rgba(white,1)
   @media all and (min-width:66.25em)
     .nav-primary
       a
         &:hover
-          color: rgba(white,1)
+          color rgba(white,1)
           span
-            opacity: 1
+            opacity 1
         span
-          display: inline
-          color: rgba(white,.25)
-          opacity: 0
-          transition: all .3s ease-in-out
+          display inline
+          color rgba(white,.25)
+          opacity 0
+          transition all .3s ease-in-out
 
 
 // -------------------------------------
@@ -134,115 +135,115 @@ large = "all and (min-width: 75em)"
 // -------------------------------------
 
 .main
-  margin-top: 5rem
-  padding: 1.25rem
+  margin-top 5rem
+  padding 1.25rem
   @media medium
-    margin-top: 0
-    padding: 3.125rem
-    width: 65%
-    top: 0
+    margin-top 0
+    padding 3.125rem
+    width 65%
+    top 0
 
 .hero
-  margin-top: 5rem
-  padding: 1.25rem
+  margin-top 5rem
+  padding 1.25rem
   .hero-logo
-    display: none
+    display none
   .hero-title
-    margin: 0 0 2rem
+    margin 0 0 2rem
     rem(29px)
-    line-height: 1.2
-    letter-spacing: -.06rem
+    line-height 1.2
+    letter-spacing -.06rem
   .hero-tagline
-    font-family: monospace
+    font-family monospace
     rem(22px)
   @media medium
-    margin-top: 0
-    padding: 3.125rem
-    width: 65%
-    top: 0
+    margin-top 0
+    padding 3.125rem
+    width 65%
+    top 0
     .hero-logo
-      margin-bottom: 1.875rem
-      max-width: 16.25rem
-      display: block
+      margin-bottom 1.875rem
+      max-width 16.25rem
+      display block
     .hero-title
       rem(40px)
   @media large
     .hero-title
-      max-width: 43.75rem
+      max-width 43.75rem
       rem(70px)
     .hero-tagline
-      max-width: 43.75rem
+      max-width 43.75rem
 
 .pic-divider
-  max-width: 65%
+  max-width 65%
 
 .content
-  margin-bottom: .5rem
-  padding: 1.25rem
+  margin-bottom .5rem
+  padding 1.25rem
   @media medium
-    margin-bottom: 1rem
-    padding: 3.125rem
-    width: 65%
-    max-width: 50rem
+    margin-bottom 1rem
+    padding 3.125rem
+    width 65%
+    max-width 50rem
 
 .services
-  margin: 2.5rem 0 0
-  padding: 2.5rem 0
-  border: 1px solid rgba(brand-gray,.25)
-  border-width: 1px 0
+  margin 2.5rem 0 0
+  padding 2.5rem 0
+  border 1px solid rgba(brand-gray,.25)
+  border-width 1px 0
 
 .service-list
   ul
-    margin: 0
-    padding: 0
-    list-style-type: none
-    font-family: proxima-nova
+    margin 0
+    padding 0
+    list-style-type none
+    font-family proxima-nova
     font-weight 700
 
 .portfolio
-  margin: 2.5rem 0
+  margin 2.5rem 0
 
 .portfolio-item
-  margin: 0 25px 20px 0;
-  width: 50%
-  width: -moz-calc(50% - 1px);
-  width: -o-calc(50% - 1px);
-  width: -webkit-calc(50% - 1px);
-  width: calc(50% - 25px);
-  position: relative
-  display: inline-block
-  border: 10px solid rgba(white,.5)
+  margin 0 25px 20px 0;
+  width 50%
+  width -moz-calc(50% - 1px);
+  width -o-calc(50% - 1px);
+  width -webkit-calc(50% - 1px);
+  width calc(50% - 25px);
+  position relative
+  display inline-block
+  border 10px solid rgba(white,.5)
   &:hover
-    border: 10px solid white
+    border 10px solid white
     .portfolio-info
       padding 1rem
-      opacity: 1
+      opacity 1
   .portfolio-info
-    padding: 10% 1rem 0
-    width: 100%
-    height: 100%
-    position: absolute
-    left: 0
-    top: 0
+    padding 10% 1rem 0
+    width 100%
+    height 100%
+    position absolute
+    left 0
+    top 0
     overflow hidden
-    color: white
-    background: rgba(darken(brand-mint,20),.85)
-    opacity: 0
-    transition: all .45s ease-out
+    color white
+    background rgba(darken(brand-mint,20),.85)
+    opacity 0
+    transition all .45s ease-out
     p
-      position: absolute
-      bottom: 1%
+      position absolute
+      bottom 1%
       rem(16px)
-      font-family: proxima-nova
-      font-weight: 900
+      font-family proxima-nova
+      font-weight 900
 
 .content-how
   h3
-    margin-bottom: 0
+    margin-bottom 0
 
 .form-success,
 .form-fail
-  display: none
+  display none
 
 
 // -------------------------------------

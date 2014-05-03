@@ -21,6 +21,8 @@ $(document).ready ->
         , 1000
         false
 
+  $('#js-budget').ddslick()
+
   $('#project-planner').submit (e) ->
     postData = $(this).serializeArray()
     formURL = $(this).attr('action')

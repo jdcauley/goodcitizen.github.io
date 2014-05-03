@@ -1,0 +1,56 @@
+lesscss-percentage(n)
+  (n * 100)%
+
+adaptive_placeholder(height, radius, margin=1rem, border=1px)
+  borders = (border * 4)
+  margin 0 0 margin
+  padding margin
+  width 100%
+  height unquote("calc(" + height + " + " + borders + ")")
+  background white
+  border border solid rgb(204, 204, 204, 1)
+  border-radius radius
+  resize none
+  outline none
+  &[required]
+    &:focus
+      border-color #00bafa
+      + label
+        &[placeholder]
+          &:before
+            color #00bafa
+    &:focus, &:valid
+      + label
+        &[placeholder]
+          &:before
+            transition-duration .2s
+            -webkit-transform translate(0, (margin * -0.8)) scale(0.9)
+            -moz-transform translate(0, (margin * -0.8)) scale(0.9)
+            -ms-transform translate(0, (margin * -0.8)) scale(0.9)
+            -o-transform translate(0, (margin * -0.8)) scale(0.9)
+            transform translate(0, (margin * -0.8)) scale(0.9)
+    &:invalid
+      + label
+        &[placeholder]
+          &[alt]
+            &:before
+              content attr(alt)
+    + label
+      &[placeholder]
+        margin-top unquote("calc(-" + height + " - " + borders + ")")
+        margin-bottom unquote("calc((" + height + " - " + margin + ") + " + borders + ")")
+        display block
+        pointer-events none
+        line-height margin
+        &:before
+          margin 0 unquote("calc(" + margin + " + " + borders + ")")
+          padding 0
+          display inline-block
+          color #898989
+          white-space nowrap
+          background-image linear-gradient(to bottom, rgb(255, 255, 255, 1), rgb(255, 255, 255, 1))
+          background-size 100% 5px
+          background-repeat no-repeat
+          background-position center
+          content attr(placeholder)
+          transition 0.3s ease-in-out

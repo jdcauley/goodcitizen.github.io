@@ -1,0 +1,30 @@
+// *************************************
+//
+//   Buttons
+//   -> Hyperlink <a> and form <button> buttons
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+input,
+select,
+textarea
+  margin 10px auto
+  padding 10px
+  width 100%
+  height auto
+  display block
+  font-size 16px
+  background transparent
+  border 2px solid
+  outline none
+  transition border-color 400ms
+
+input
+  &[type="text"],
+  &[type="email"],
+  &[type="tel"]
+    adaptive_placeholder(4rem, 0, 1rem, 2px)

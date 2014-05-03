@@ -83,17 +83,26 @@ section#work-together.content.content-work-together
       Something went wrong.
   .form-wrap
     form#project-planner(action="http://forms.wearegoodcitizen.com/contact/new" method="post")
-      input(type="text", name="name", value="", placeholder="Your Name")
-      input(type="text", name="email", value="", placeholder="Email")
-      input(type="text", name="phone", value="", placeholder="Phone Number")
-      textarea(type="text", name="message", value="", placeholder="Message")
-      select(name="budget")
-        option(value="$2k-$5k") $2k-$5k
-        option(value="$5k-$10k") $5k-$10k
-        option(value="$10k-$20k") $10k-$20k
-        option(value="$20k+") $20k+
-        option(value="Not Sure") Not Sure
-      input(type="submit", value="Submit")
+      .form-control-group
+        input(type="text", name="name", required="")
+        label(placeholder="First and Last Name", alt="Your Name")
+      .form-control-group
+        input(type="email", name="email", required="")
+        label(placeholder="Email", alt="Email")
+      .form-control-group
+        input(type="tel", name="phone", required="")
+        label(placeholder="Phone Number", alt="Phone Number")
+      .form-control-group
+        textarea(type="text", name="message", value="", placeholder="Message")
+      .form-control-group
+        select(name="budget")
+          option(value="$2k-$5k") $2k-$5k
+          option(value="$5k-$10k") $5k-$10k
+          option(value="$10k-$20k") $10k-$20k
+          option(value="$20k+") $20k+
+          option(value="Not Sure") Not Sure
+      .form-control-group
+        input(type="submit", value="Submit")
   .form-success
     :markdown
       ### Thanks

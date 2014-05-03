@@ -75,31 +75,33 @@ section#who.content.content-who
     ## Who we are
 
 section#work-together.content.content-work-together
-  :markdown
-    ## Hi, we'd love to work together, or just connect.
+  h2 Hi, we'd love to work together, or just connect
+  p In order to learn how we can do this quickly and effectively, we would like to ask you a few questions...
   .form-fail
     :markdown
       ### Oops!
       Something went wrong.
   .form-wrap
-    form#project-planner(action="http://forms.wearegoodcitizen.com/contact/new" method="post")
+    form#project-planner(action='http://forms.wearegoodcitizen.com/contact/new' method='post')
       .form-control-group
-        input(type="text", name="name", placeholder="Your name")
+        label(for='name') Your name
+        input(type='text', name='name')
       .form-control-group
-        input(type="email", name="email", placeholder="Email")
+        label(for='email') Email
+        input(type='email', name='email')
+      .form-control-group.form-control-select
+        label(for='budget') Budget
+        select.select-styled(name='budget')
+          option(value='', selected='selected', disabled='') Please let us know your rough budget
+          option(value='$2k-$5k') $2k-$5k
+          option(value='$5k-$10k') $5k-$10k
+          option(value='$10k-$20k') $10k-$20k
+          option(value='$20k+') $20k+
+          option(value='Not Sure') Not Sure
       .form-control-group
-        input(type="tel", name="phone", placeholder="Phone")
-      .form-control-group
-        textarea(type="text", name="message", value="", placeholder="Message")
-      .form-control-group
-        select(name="budget")
-          option(value="$2k-$5k") $2k-$5k
-          option(value="$5k-$10k") $5k-$10k
-          option(value="$10k-$20k") $10k-$20k
-          option(value="$20k+") $20k+
-          option(value="Not Sure") Not Sure
-      .form-control-group
-        input(type="submit", value="Submit")
+        label(for='message') Message
+        textarea(type='text', name='message', rows='10', value='', placeholder="A brief overview of your project goals and requirements will give us a better idea of what's in store, and will help us ask you the right questions when we talk.")
+      input.form-button(type='submit', value='Submit')
   .form-success
     :markdown
       ### Thanks

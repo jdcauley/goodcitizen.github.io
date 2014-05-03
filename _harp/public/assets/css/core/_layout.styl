@@ -34,14 +34,22 @@ large = "all and (min-width: 75em)"
   @media large
     margin-left 5%
     float left
-    + .column { margin-top 0 }
-    &:first-child { margin-left 0 }
-    &.full { width 100% }
-    &.half { width 47.5% }
-    &.two-thirds { width 65% }
-    &.one-third { width 30% }
-    &.one-fourth { width 21.25% }
-    &.three-fourths { widows 73.75% }
+    + .column
+      margin-top 0
+    &:first-child 
+      margin-left 0
+    &.full 
+      width 100%
+    &.half 
+      width 47.5%
+    &.two-thirds 
+      width 65%
+    &.one-third
+      width 30%
+    &.one-fourth
+      width 21.25%
+    &.three-fourths
+      widows 73.75%
     &.full-narrow
       margin-left 17.5% !important
       width 65%
@@ -128,7 +136,6 @@ large = "all and (min-width: 75em)"
           color rgba(white,.25)
           opacity 0
           transition all .3s ease-in-out
-
 
 // -------------------------------------
 //   Main
@@ -245,26 +252,10 @@ large = "all and (min-width: 75em)"
 .form-fail
   display none
 
-
 // -------------------------------------
-//   Utilities
+//   Footer
 // -------------------------------------
 
-$l-block, .l-block
-  display: block
-
-$l-condense, .l-condense
-  margin-bottom: rem(base-whitespace / 2)
-
-$l-pullLeft, .l-pullLeft
-  float: left
-
-$l-pullRight, .l-pullRight
-  float: right
-
-$l-space, .l-space
-  margin-bottom: rem(base-whitespace)
-
-$l-xspace, .l-xspace
-  margin-bottom: rem(base-whitespace * 2)
-
+.footer
+  height 75px
+  background darken(brand-red, 40%)

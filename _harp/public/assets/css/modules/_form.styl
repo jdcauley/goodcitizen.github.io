@@ -9,34 +9,71 @@
 //   Base
 // -------------------------------------
 
+.form-control-group
+  margin 0
+  padding .2rem 1rem 1rem
+  width 100%
+  height auto
+  border 2px solid
+  transition all 400ms
+  + .form-control-group
+    border-width 0 2px 2px
+
+label
+  font 700 12px proxima-nova
+  letter-spacing 0.05rem
+  text-transform uppercase
+  color darken(brand-red, 40%)
+
 input,
 select,
 textarea
-  margin 10px auto
-  padding 1rem
   width 100%
-  height auto
   display block
   font 18px proxima-nova
   background transparent
-  border 2px solid
+  border none
   outline none
-  transition all 400ms
+
+input[type="text"],
+input[type="email"]
+  padding 0 0 .3rem
+  border-bottom 1px solid rgba(black, .2)
+
+.form-control-select
+  padding 1rem
+  .select-styled
+    padding .5rem
+    background url(/assets/img/icon-arrow-down.png) 97% 52%
+    background-size 11px 6px
+    background-repeat no-repeat
+    border 0
+    border-bottom 1px solid rgba(black, .2)
+    border-radius 0
+    -webkit-appearance none
+    -moz-appearance none
+
+.form-button
+  padding 1rem
+  width auto
+  color white
+  background base-color
+  cursor pointer
 
 input:focus::-webkit-input-placeholder
-  opacity .6
+  opacity .2
 input:focus:-moz-placeholder
-  opacity .6
+  opacity .2
 input:focus::-moz-placeholder
-  opacity .6
+  opacity .2
 input:focus:-ms-input-placeholder
-  opacity .6
+  opacity .2
 
 textarea:focus::-webkit-input-placeholder
-  opacity .6
+  opacity .2
 textarea:focus:-moz-placeholder
-  opacity .6
+  opacity .2
 textarea:focus::-moz-placeholder
-  opacity .6
+  opacity .2
 textarea:focus:-ms-input-placeholder
-  opacity .6
+  opacity .2

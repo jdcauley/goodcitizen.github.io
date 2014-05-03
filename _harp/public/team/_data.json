@@ -1,0 +1,12 @@
+{
+  "1": {
+    "name": "John Peele",
+    "title": "Principal & Designer",
+    "img_url": "/assets/img/photo-team-john.jpg"
+  },
+  "2": {
+    "name": "Jordan Cauley",
+    "title": "Strategist & Digital Developer",
+    "img_url": "/assets/img/photo-team-jordan.jpg"
+  }
+}

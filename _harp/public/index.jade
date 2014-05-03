@@ -73,6 +73,17 @@ img.pic-divider.pic-divider-3(src='assets/img/pic-3.jpg')
 section#who.content.content-who
   :markdown
     ## Who we are
+    We are a small team of storytellers, designers, strategists, coders and marketers all working together to bring out the best in your brand and your product.
+  .row
+    .column.one-third
+      h5 Our Team
+    .column.two-thirds
+      each item, slug in public.team._data
+        .team-member
+          img(src="#{ item.img_url }")
+          .team-member-info
+            h5 #{ item.name }
+            h6 #{ item.title }
 
 section#work-together.content.content-work-together
   h2 Hi, we'd love to work together, or just connect

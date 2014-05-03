@@ -206,6 +206,9 @@ large = "all and (min-width: 75em)"
     list-style-type none
     font-family proxima-nova
     font-weight 700
+  li
+    margin-bottom .5rem
+    line-height 1
 
 .portfolio
   margin 2.5rem 0
@@ -213,9 +216,9 @@ large = "all and (min-width: 75em)"
 .portfolio-item
   margin 0 25px 20px 0;
   width 50%
-  width -moz-calc(50% - 1px);
-  width -o-calc(50% - 1px);
-  width -webkit-calc(50% - 1px);
+  width -moz-calc(50% - 25px);
+  width -o-calc(50% - 25px);
+  width -webkit-calc(50% - 25px);
   width calc(50% - 25px);
   position relative
   display inline-block
@@ -247,6 +250,42 @@ large = "all and (min-width: 75em)"
 .content-how
   h3
     margin-bottom 0
+
+.team-member
+  margin 0 10px 5px 0;
+  width 45%
+  width -moz-calc(50% - 10px);
+  width -o-calc(50% - 10px);
+  width -webkit-calc(50% - 10px);
+  width calc(50% - 10px);
+  position relative
+  display inline-block
+  border 10px solid rgba(brand-gray,.5)
+  &:hover
+    border 10px solid brand-gray
+    .team-member-info
+      padding 1rem
+      opacity 1
+  .team-member-info
+    padding 10% 1rem 0
+    width 100%
+    height 100%
+    position absolute
+    left 0
+    top 0
+    overflow hidden
+    color white
+    background rgba(darken(brand-red,20),.85)
+    opacity 0
+    transition all .45s ease-out
+    h5
+      margin-bottom 0
+    p
+      position absolute
+      bottom 1%
+      rem(16px)
+      font-family proxima-nova
+      font-weight 900
 
 .form-success,
 .form-fail

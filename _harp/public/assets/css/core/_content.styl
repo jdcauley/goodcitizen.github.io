@@ -11,45 +11,45 @@
 
 h1, h2, h3,
 h4, h5, h6
-  font-family: header-font-stack
-  font-weight: header-font-weight
+  font-family header-font-stack
+  font-weight header-font-weight
 
 h1, .h1
-  margin: 0 0 1rem
+  margin 0 0 1rem
   rem(40px)
 
 h2, .h2
-  margin: 1rem 0
+  margin 1rem 0
   rem(29px)
-  font-weight: 700
-  letter-spacing: -.05rem
+  font-weight 700
+  letter-spacing -.05rem
   .content &
-    display: inline-block
-    line-height: 1.2
-    border-bottom: 6px solid
+    display inline-block
+    line-height 1.2
+    border-bottom 6px solid
   @media medium
-    margin: 1rem 0 2rem
+    margin 1rem 0 2rem
     rem(40px)
 
 h3, .h3
-  margin: 0 0 1rem
+  margin 0 0 1rem
   rem(24px)
   @media medium
-    margin: 1rem 0 2rem
+    margin 1rem 0 2rem
     rem(30px)
 
 h4, .h4
-  margin: 0 0 1rem
+  margin 0 0 1rem
   rem(22px)
   @media medium
     rem(25px)
 
 h5, .h5
-  margin: 0 0 1rem
+  margin 0 0 1rem
   rem(20px)
 
 h6, .h6
-  margin: 0 0 1rem
+  margin 0 0 1rem
   rem(16px)
 
 // -------------------------------------
@@ -57,12 +57,15 @@ h6, .h6
 // -------------------------------------
 
 .chromeframe
-  margin: 0
-  padding: 15px 0
-  text-align: center
-  background: #f0ad4e
+  margin 0
+  padding 15px 0
+  text-align center
+  background #f0ad4e
   a
-    color: #fff
-    text-decoration: underline
+    color #fff
+    text-decoration underline
     &:hover
-      color: black
+      color black
+
+.text-muted
+  color darken(brand-red, 40%)

@@ -22,22 +22,22 @@ $(document).ready ->
         false
 
   $('#project-planner').submit (e) ->
-    postData = $(this).serializeArray()
-    formURL = $(this).attr('action')
-    $.ajax(
-      url: formURL
-      type: 'POST'
-      data: postData
-    ).done (r) ->
-      if r.success
-        $('.form-wrap').hide 'slow'
-        $('.form-success').show 'slow'
-      else
-        $('.form-fail').show 'slow'
-      return
-
     e.preventDefault() #STOP default action
     e.unbind() #unbind. to stop multiple form submit.
+    if $(this).parsley('isValid')
+      postData = $(this).serializeArray()
+      formURL = $(this).attr('action')
+      $.ajax(
+        url: formURL
+        type: 'POST'
+        data: postData
+      ).done (r) ->
+        if r.success
+          $('.form-wrap').hide 'slow'
+          $('.form-success').show 'slow'
+        else
+          $('.form-fail').show 'slow'
+        return
     return
 
   revealLogo()

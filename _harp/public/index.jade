@@ -76,7 +76,7 @@ section#who.content.content-who
     We are a small team of storytellers, designers, strategists, coders and marketers all working together to bring out the best in your brand and your product.
   .row
     .column.one-third
-      h5 Our Team
+      h3 Our Team
     .column.two-thirds
       each item, slug in public.team._data
         .team-member
@@ -93,16 +93,16 @@ section#work-together.content.content-work-together
       ### Oops!
       Something went wrong.
   .form-wrap
-    form#project-planner(action='http://forms.wearegoodcitizen.com/contact/new' method='post')
+    form#project-planner(action='http://forms.wearegoodcitizen.com/contact/new',method='post', novalidate='novalidate', data-parsley-validate)
       .form-control-group
         label(for='name') Your name
-        input(type='text', name='name')
+        input(type='text', name='name', required='required', data-parsley-trigger='change', data-parsley-error-message='We need to know what to call you.')
       .form-control-group
         label(for='email') Email
-        input(type='email', name='email')
+        input(type='email', name='email', required='required', data-parsley-trigger='change', data-parsley-error-message='We need a valid email address here.')
       .form-control-group.form-control-select
         label(for='budget') Budget
-        select.select-styled(name='budget')
+        select.select-styled(name='budget', required='required', data-parsley-error-message='Knowing your budget is very important to us.')
           option(value='', selected='selected', disabled='') Please let us know your rough budget
           option(value='$2k-$5k') $2k-$5k
           option(value='$5k-$10k') $5k-$10k
@@ -111,9 +111,9 @@ section#work-together.content.content-work-together
           option(value='Not Sure') Not Sure
       .form-control-group
         label(for='message') Message
-        textarea(type='text', name='message', rows='10', value='', placeholder="A brief overview of your project goals and requirements will give us a better idea of what's in store, and will help us ask you the right questions when we talk.")
+        textarea(type='text', name='message', rows='10', value='', placeholder="A brief overview of your project goals and requirements will give us a better idea of what's in store, and will help us ask you the right questions when we talk.", required='required', data-parsley-trigger='change', data-parsley-error-message='Looks like you forgot to include your message.')
       input.form-button(type='submit', value='Submit')
   .form-success
     :markdown
-      ### Thanks
+      ### Thank you!
       We look forward to speaking with you soon.

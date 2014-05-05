@@ -36,9 +36,12 @@ textarea
   outline none
 
 input[type="text"],
-input[type="email"]
+input[type="email"],
+input[type="tel"]
   padding 0 0 .3rem
   border-bottom 1px solid rgba(black, .2)
+  &.parsley-error
+    border-bottom 1px solid brand-warning
 
 .form-control-select
   padding 1rem
@@ -52,6 +55,8 @@ input[type="email"]
     border-radius 0
     -webkit-appearance none
     -moz-appearance none
+    &.parsley-error
+      border-bottom 1px solid brand-warning
 
 .form-button
   padding 1rem

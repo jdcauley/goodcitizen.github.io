@@ -77,65 +77,121 @@ large = "all and (min-width: 75em)"
   top 0
   background url(/assets/img/bg-ocean.jpg)
   z-index 100
-  .logo
-    max-width 9.375rem
-    display block
-    border none
-  .nav-primary,
-  .nav-secondary
-    display none
   @media medium
     padding 1.25rem 1.875rem
     width 35%
     height 100%
     right 0
-    .logo
-      margin 1.875rem 0
-      max-width 16.25rem
-      opacity 0
-      transition opacity .5s ease-in-out
-      &.js-peekaboo
-        opacity 1
-    .nav-primary,
-    .nav-secondary
-      display block
-      font-family proxima
-    .nav-primary
-      margin-bottom 1.875rem
-      a
-        rem(36px)
-        font-weight 900
-        letter-spacing -.06rem
-        color rgba(white,.75)
-        transition all .3s ease-in-out
-        &:hover
-          color rgba(white,1)
-        span
-          display none
-    .nav-secondary
-      li
-        margin-bottom .5rem
-      a
-        rem(24px)
-        font-weight 700
-        color rgba(white,.75)
-        transition all .3s ease-in-out
-        border-bottom 3px solid rgba(white,.75)
-        &:hover
-          color rgba(white,1)
-          border-bottom 3px solid rgba(white,1)
+
+.logo
+  max-width 9.375rem
+  display block
+  border none
+  @media medium
+    margin 1.875rem 0
+    max-width 16.25rem
+    opacity 0
+    transition opacity .5s ease-in-out
+    &.js-peekaboo
+      opacity 1
+
+.js-menu-trigger
+  position absolute
+  top 19px
+  right 15px
+  a
+    padding 10px
+    display inline-block
+    font 700 12px proxima-nova
+    letter-spacing 0.05rem
+    text-transform uppercase
+    text-align right
+    color white
+    border none
+    &:hover
+      border none
+  @media medium
+    display none
+
+.nav-primary,
+.nav-secondary
+  display none
+  @media medium
+    display block
+    font-family proxima
+
+.nav-primary
+  @media medium
+    margin-bottom 1.875rem
+    a
+      rem(36px)
+      font-weight 900
+      letter-spacing -.06rem
+      color rgba(white,.75)
+      transition all .3s ease-in-out
+      &:hover
+        color rgba(white,1)
+      span
+        display none
   @media all and (min-width:66.25em)
-    .nav-primary
-      a
-        &:hover
-          color rgba(white,1)
-          span
-            opacity 1
+    a
+      &:hover
+        color rgba(white,1)
         span
-          display inline
-          color rgba(white,.25)
-          opacity 0
-          transition all .3s ease-in-out
+          opacity 1
+      span
+        display inline
+        color rgba(white,.25)
+        opacity 0
+        transition all .3s ease-in-out
+
+.nav-secondary
+  @media medium
+    li
+      margin-bottom .5rem
+    a
+      rem(24px)
+      font-weight 700
+      color rgba(white,.75)
+      transition all .3s ease-in-out
+      border-bottom 3px solid rgba(white,.75)
+      &:hover
+        color rgba(white,1)
+        border-bottom 3px solid rgba(white,1)
+
+.nav-smallscreen
+  padding 5rem 3rem 0px
+  width 100%
+  height 100%
+  position fixed
+  top 0
+  left 0
+  background rgba(black,.95)
+  opacity 0
+  transition opacity .75s ease-out
+  z-index 500
+  li
+    a
+      padding 0.7rem 0
+      display block
+      rem(22px)
+      font-weight 900
+      font-family proxima
+      color rgba(white,.75)
+      span
+        color rgba(white,.25)
+  .nav-work-together,
+  .nav-coffee
+    rem(20px)
+    font-weight 700
+  .nav-work-together
+    margin-top 1.5rem
+    padding-top 1.5rem
+    width 100%
+    display block
+    border-top 1px solid rgba(255,255,255,.5)
+  &.active
+    opacity 1
 
 // -------------------------------------
 //   Main

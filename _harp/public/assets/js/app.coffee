@@ -7,9 +7,12 @@ $(document).ready ->
     scrollTop = $(window).scrollTop()
 
     if scrollTop > distance
-      logo.addClass "js-peekaboo"
+      logo.addClass 'js-peekaboo'
     else
-      logo.removeClass "js-peekaboo"
+      logo.removeClass 'js-peekaboo'
+
+  $('.js-menu-trigger').click ->
+    $('.nav-smallscreen').toggleClass 'active'
 
   $('a[href*=#]:not([href=#])').click ->
     if location.pathname.replace(/^\//, "") is @pathname.replace(/^\//, "") and location.hostname is @hostname

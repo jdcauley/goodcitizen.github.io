@@ -31,6 +31,8 @@ html
     header.mast
       a.logo(href='#top')
         img(src='assets/img/logo.svg', alt='Good Citizen')
+      .js-menu-trigger
+        a(href='#') Menu
       nav.nav.nav-primary
         ul
           li
@@ -45,6 +47,21 @@ html
             a.nav-work-together(href='#work-together') Let's work together
           li
             a.nav-coffee(href='http://twitter.com/share?text=Hey%20@thegoodcitizens,%20lets%20chat%20over%20coffee', target='_blank') Let's just grab a coffee
+
+    nav.nav.nav-smallscreen
+      .js-menu-trigger
+        a(href='#') Close
+      ul
+        li
+          a.nav-what(href='#what') What <span>we do for you</span>
+        li
+          a.nav-how(href='#how') How <span>we do it</span>
+        li
+          a.nav-who(href='#who') Who <span>we are</span>
+        li
+          a.nav-work-together(href='#work-together') Let's work together
+        li
+          a.nav-coffee(href='http://twitter.com/share?text=Hey%20@thegoodcitizens,%20lets%20chat%20over%20coffee', target='_blank') Let's just grab a coffee
 
     != yield
 

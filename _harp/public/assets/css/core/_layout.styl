@@ -192,6 +192,8 @@ large = "all and (min-width: 75em)"
     border-top 1px solid rgba(255,255,255,.5)
   &.active
     opacity 1
+  @media medium
+    display none
 
 // -------------------------------------
 //   Main
@@ -283,6 +285,7 @@ large = "all and (min-width: 75em)"
     border 10px solid white
     .portfolio-info
       padding 1rem
+      background rgba(darken(brand-mint,20),.85)
       opacity 1
   .portfolio-info
     padding 10% 1rem 0
@@ -293,7 +296,6 @@ large = "all and (min-width: 75em)"
     top 0
     overflow hidden
     color white
-    background rgba(darken(brand-mint,20),.85)
     opacity 0
     transition all .45s ease-out
     p

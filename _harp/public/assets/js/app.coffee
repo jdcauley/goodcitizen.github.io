@@ -11,8 +11,9 @@ $(document).ready ->
     else
       logo.removeClass 'js-peekaboo'
 
-  $('.js-menu-trigger').click ->
+  $('.js-menu-trigger, .nav-smallscreen a').click ->
     $('.nav-smallscreen').toggleClass 'active'
+    return
 
   $('a[href*=#]:not([href=#])').click ->
     if location.pathname.replace(/^\//, "") is @pathname.replace(/^\//, "") and location.hostname is @hostname
@@ -20,7 +21,7 @@ $(document).ready ->
       target = (if target.length then target else $('[name=" + @hash.slice(1) + "]'))
       if target.length
         $('html,body').animate
-          scrollTop: target.offset().top
+          scrollTop: target.offset().top - 75
         , 1000
         false
 

@@ -1,5 +1,5 @@
 $(document).ready ->
-  
+
   revealLogo = ->
     logo = $('.logo')
     distance = $('.hero').offset().top + 130

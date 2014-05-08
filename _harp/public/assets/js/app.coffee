@@ -1,7 +1,6 @@
-###
-Multiline Documentation
-###
 $(document).ready ->
+  FastClick.attach document.body
+
   revealLogo = undefined
   revealLogo = ->
     distance = undefined

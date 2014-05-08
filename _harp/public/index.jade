@@ -103,12 +103,12 @@ section#work-together.content.content-work-together
       .form-control-group.form-control-select
         label(for='budget') Budget
         select.select-styled(name='budget', required='required', data-parsley-error-message='Knowing your budget is very important to us.')
-          option(value='', selected='selected', disabled='') Your rough budget
-          option(value='$2k-$5k') $2k-$5k
-          option(value='$5k-$10k') $5k-$10k
-          option(value='$10k-$20k') $10k-$20k
-          option(value='$20k+') $20k+
+          option(value='less than $10k') less than $10k
+          option(value='$10k-$20k', selected='selected') $10k-$25k
+          option(value='$25k-$50k') $25k-$50k
+          option(value='$50k+') $50k+
           option(value='Not Sure') Not Sure
+        small Really, we're not asking because we want to spend it all. We work within a set of given constraints and your budget is one of them. If you have an idea of what you want to spend on a project it makes it much easier to recommend an approach.
       .form-control-group
         label(for='message') Message
         textarea(type='text', name='message', rows='10', value='', placeholder="A brief overview of your project goals and requirements will give us a better idea of what's in store, and will help us ask you the right questions when we talk.", required='required', data-parsley-trigger='change', data-parsley-error-message='Looks like you forgot to include your message.')

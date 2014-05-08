@@ -1,5 +1,6 @@
 $(document).ready(function() {
   var revealLogo;
+  FastClick.attach(document.body);
   revealLogo = function() {
     var distance, logo, scrollTop;
     logo = $('.logo');

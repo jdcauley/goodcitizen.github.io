@@ -1,5 +1,7 @@
 $(document).ready ->
 
+  FastClick.attach document.body
+
   revealLogo = ->
     logo = $('.logo')
     distance = $('.hero').offset().top + 130

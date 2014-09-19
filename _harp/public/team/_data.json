@@ -1,12 +1,26 @@
 {
   "1": {
     "name": "John Peele",
-    "title": "Principal & Designer",
+    "title": "Principal",
+    "superpower": "Strategy, UX, UI, Front-end Dev",
     "img_url": "/assets/img/photo-team-john.jpg"
   },
   "2": {
+    "name": "Magnetic Ideas",
+    "title": "Fellow Avengers",
+    "superpower": "Strategy, UX, Digital Marketing",
+    "img_url": "/assets/img/photo-team-magnetic.png"
+  },
+  "3": {
+    "name": "Maslo Media",
+    "title": "Fellow Avengers",
+    "superpower": "Strategy, Media, Production",
+    "img_url": "/assets/img/photo-team-maslo.png"
+  },
+  "4": {
     "name": "Jordan Cauley",
-    "title": "Strategist & Digital Developer",
+    "title": "Fellow Avenger",
+    "superpower": "UX, Front-end Dev",
     "img_url": "/assets/img/photo-team-jordan.jpg"
   }
 }

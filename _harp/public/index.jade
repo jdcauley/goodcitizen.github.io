@@ -1,6 +1,7 @@
 section.hero#top
   img.hero-logo(src='assets/img/logo.svg', alt='Good Citizen')
-  h1.hero-title We create compelling digital experiences that put people first.
+  //- h1.hero-title We create compelling digital experiences that put people first.
+  h1.hero-title We work with companies to solve their problems by designing solutions for their customer's problems.
   p.hero-tagline See <a href="#what">what</a> we can do for you, <a href="#how">how</a> we go about it, and <a href="#who">who</a> you would work with.
 
 img.pic-divider.pic-divider-1(src='assets/img/pic-1.jpg')
@@ -8,7 +9,7 @@ img.pic-divider.pic-divider-1(src='assets/img/pic-1.jpg')
 section#what.content.content-what
   h2 What do we do?
   p We get asked this a lot. Single taglines and elevator statements can sound hollow and contrived. So here is the longer explanation…
-  p Good Citizen is a digital <em class="text-muted">(design and development)</em> studio.
+  p Good Citizen is a digital <em class="text-muted">(design and development)</em> studio. Actually, Good Citizen is primarily me, John Peele. I partner with like-minded designers and marketers in an Avengers model. We assemble the perfect team to solve the problem at hand.
   p We believe in the power of design thinking to solve human problems. We love creating digital products and services that people enjoy and that bring delight. Obviously, we're into design and technology, we wouldn't be able to create engaging new experiences if we weren't, but we love people. People are the most important part of what we do, because we're here to solve problems for them and not just take up space. By focusing on strategy, design, and technology, we create experiences that meet the needs of our clients, and their customers, in ways that are delightful and unexpected.
   .services
     h3 Services
@@ -19,20 +20,15 @@ section#what.content.content-what
           li Digital Strategy
           li Product Strategy
           li Content Strategy
-          li Competitive Audit
           li User Research
-          li Email Marketing
-          li Analytics &amp; Measurement
+          li One-on-One Consulting
       .service-list.column.one-third
         h5 Design
         ul
           li User Experience Design
-          li Information Architecture
           li Interface Design
           li Multi-device Web Design (Responsive)
-          li Interactive Prototyping
-          li Email Design
-          li Brand Identity
+          li Mobile Design
       .service-list.column.one-third
         h5 Development
         ul
@@ -73,17 +69,18 @@ img.pic-divider.pic-divider-3(src='assets/img/pic-3.jpg')
 section#who.content.content-who
   :markdown
     ## Who we are
-    We are a small team of storytellers, designers, strategists, coders and marketers all working together to bring out the best in your brand and your product.
+    We are a small team of storytellers, designers, strategists, coders and marketers all working together to bring out the best in your brand and your product. We each have our individual strengths, but we assemble on a regular basis to save the world for our customers.
   .row
     .column.one-third
       h3 Our Team
-    .column.two-thirds
+    .team.column.two-thirds
       each item, slug in public.team._data
         .team-member
           img(src="#{ item.img_url }")
           .team-member-info
             h5 #{ item.name }
             h6 #{ item.title }
+            p #{ item.superpower }
 
 section#work-together.content.content-work-together
   h2 Hi, we'd love to work together, or just connect

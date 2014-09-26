@@ -33,26 +33,30 @@ $(document).ready(function() {
       }
     }
   });
-  Parse.initialize("your_parse_app_key", "your_parse_javascript_key");
+  Parse.initialize("C0w22hONKF6OXEXUJMuOlMnX2g8n2nPDq1LDWazM", "wnN2fUkBrgwX6lz4eboDk2FY5RVGZ7f86draHV9R");
   $("#project-planner").submit(function(e) {
     var data;
     e.preventDefault();
-    data = {
-      name: document.getElementById("js-name").value,
-      email: document.getElementById("js-email").value,
-      budget: document.getElementById("js-budget").value,
-      message: document.getElementById("js-message").value
-    };
-    Parse.Cloud.run("sendEmail", data, {
-      success: function(object) {
-        $(".form-wrap").hide("slow");
-        $(".form-success").show("slow");
-      },
-      error: function(object, error) {
-        console.log(error);
-        $(".form-fail").show("slow");
-      }
-    });
+    if ($(this).parsley("isValid")) {
+      $(".form-button-loading").addClass("js-submitted");
+      data = {
+        name: document.getElementById("js-name").value,
+        email: document.getElementById("js-email").value,
+        budget: document.getElementById("js-budget").value,
+        message: document.getElementById("js-message").value
+      };
+      Parse.Cloud.run("sendEmail", data, {
+        success: function(object) {
+          $(".form-wrap").hide("slow");
+          $(".form-success").show("slow");
+        },
+        error: function(object, error) {
+          console.log(error);
+          $(".form-fail").show("slow");
+        }
+      });
+      return;
+    }
   });
   revealLogo();
   return $(window).scroll(function() {

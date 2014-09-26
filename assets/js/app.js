@@ -33,16 +33,26 @@ $(document).ready(function() {
       }
     }
   });
+  Parse.initialize("your_parse_app_key", "your_parse_javascript_key");
   $("#project-planner").submit(function(e) {
+    var data;
     e.preventDefault();
-    if ($(this).parsley("isValid")) {
-      $.post('/contact.php', $(this).serialize()).success(function(data) {
+    data = {
+      name: document.getElementById("js-name").value,
+      email: document.getElementById("js-email").value,
+      budget: document.getElementById("js-budget").value,
+      message: document.getElementById("js-message").value
+    };
+    Parse.Cloud.run("sendEmail", data, {
+      success: function(object) {
         $(".form-wrap").hide("slow");
-        return $(".form-success").show("slow");
-      }).fail(function(data) {
-        return alert('failure');
-      });
-    }
+        $(".form-success").show("slow");
+      },
+      error: function(object, error) {
+        console.log(error);
+        $(".form-fail").show("slow");
+      }
+    });
   });
   revealLogo();
   return $(window).scroll(function() {

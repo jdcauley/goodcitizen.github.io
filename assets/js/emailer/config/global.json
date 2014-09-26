@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Sendgrid Contact Form": {
+            "applicationId": "C0w22hONKF6OXEXUJMuOlMnX2g8n2nPDq1LDWazM", 
+            "masterKey": "0Hz2vFsazGmsPImY1t5xUh68VXR79kmkg77iouGD"
+        }, 
+        "_default": {
+            "link": "Sendgrid Contact Form"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.0"
+    }
+}

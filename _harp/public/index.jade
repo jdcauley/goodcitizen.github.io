@@ -109,7 +109,10 @@ section#work-together.content.content-work-together
       .form-control-group
         label(for='message') Message
         textarea#js-message(type='text', name='message', rows='10', value='', placeholder="A brief overview of your project goals and requirements will give us a better idea of what's in store, and will help us ask you the right questions when we talk.", required='required', data-parsley-trigger='change', data-parsley-error-message='Looks like you forgot to include your message.')
-      input.form-button(type='submit', value='Submit')
+      button.form-button.form-button-loading
+        | Submit
+        span.loading-anim
+          img(src='/assets/img/loading-bubbles.svg')
   .form-success
     :markdown
       ### Thank you!

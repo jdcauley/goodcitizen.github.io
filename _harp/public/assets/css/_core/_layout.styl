@@ -372,6 +372,27 @@ body
       font-family proxima-nova
       font-weight 900
 
+.form-button-loading
+  display block
+  position relative
+  font 18px proxima-nova
+  background transparent
+  border none
+  outline none
+  transition all .3s ease-in-out
+  .loading-anim
+    width 32px
+    height 32px
+    display inline-block
+    position absolute
+    top 12px
+    right 5px
+    opacity 0
+  &.js-submitted
+    padding-right 3rem
+    .loading-anim
+      opacity 1
+
 .form-success,
 .form-fail
   display none

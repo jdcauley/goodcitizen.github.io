@@ -30,33 +30,36 @@ $(document).ready ->
         false
 
   # Initialize Parse with your Parse application & javascript keys
-  Parse.initialize "your_parse_app_key", "your_parse_javascript_key"
+  Parse.initialize "C0w22hONKF6OXEXUJMuOlMnX2g8n2nPDq1LDWazM", "wnN2fUkBrgwX6lz4eboDk2FY5RVGZ7f86draHV9R"
 
   # Setup the form to watch for the submit event
   $("#project-planner").submit (e) ->
     e.preventDefault()
+    if $(this).parsley("isValid")
+      $(".form-button-loading").addClass "js-submitted"
 
-    # Grab the elements from the form to make up
-    # an object containing name, email and message
-    data =
-      name: document.getElementById("js-name").value
-      email: document.getElementById("js-email").value
-      budget: document.getElementById("js-budget").value
-      message: document.getElementById("js-message").value
+      # Grab the elements from the form to make up
+      # an object containing name, email and message
+      data =
+        name: document.getElementById("js-name").value
+        email: document.getElementById("js-email").value
+        budget: document.getElementById("js-budget").value
+        message: document.getElementById("js-message").value
 
-    # Run our Parse Cloud Code and
-    # pass our 'data' object to it
-    Parse.Cloud.run "sendEmail", data,
-      success: (object) ->
-        $(".form-wrap").hide "slow"
-        $(".form-success").show "slow"
-        return
+      # Run our Parse Cloud Code and
+      # pass our 'data' object to it
+      Parse.Cloud.run "sendEmail", data,
+        success: (object) ->
+          $(".form-wrap").hide "slow"
+          $(".form-success").show "slow"
+          return
 
-      error: (object, error) ->
-        console.log error
-        $(".form-fail").show "slow"
-        return
+        error: (object, error) ->
+          console.log error
+          $(".form-fail").show "slow"
+          return
 
+      return
     return
 
   revealLogo()

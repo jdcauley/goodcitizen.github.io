@@ -19,8 +19,8 @@ Parse.Cloud.define("sendEmail", function(request, response) {
    from: email,
    fromname: name,
    subject: "Good Citizen - Project Planner Submission",
-   // text: "Name: "+name+"\nEmail: "+email+"\nMessage:\n\n"+message
-   text: "<html><body><table rules='all' style='border-color: #666;' cellpadding='10'><tr style='background: #eee;'><td><strong>Name:</strong> </td><td>"+name+"</td></tr><tr><td><strong>Email:</strong> </td><td>"+email+"</td></tr><tr><td><strong>Phone:</strong> </td><td>"+budget+"</td></tr><tr><td><strong>Message:</strong> </td><td>"+message+"</td></tr></table></body></html>"
+   text: "Name: "+name+"\nEmail: "+email+"\nMessage:\n\n"+message,
+   html: '<html><body style="font-size: 16px;"><table rules="all" style="border-color: #666;" cellpadding="10"><tr style="background: #eee;"><td><strong>Name:</strong> </td><td>'+name+'</td></tr><tr><td><strong>Email:</strong> </td><td><a href="mailto:'+email+'">'+email+'</a></td></tr><tr><td><strong>Budget:</strong> </td><td>'+budget+'</td></tr><tr><td><strong>Message:</strong> </td><td>'+message+'</td></tr></table></body></html>'
 
    }, {
      success: function(httpResponse) {

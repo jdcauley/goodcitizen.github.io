@@ -34,24 +34,13 @@ $(document).ready(function() {
     }
   });
   $("#project-planner").submit(function(e) {
-    var formURL, postData;
-    formURL = void 0;
-    postData = void 0;
     e.preventDefault();
     if ($(this).parsley("isValid")) {
-      postData = $(this).serializeArray();
-      formURL = $(this).attr("action");
-      $.ajax({
-        url: formURL,
-        type: "POST",
-        data: postData,
-        success: function(data, textStatus, jqXHR) {
-          $(".form-wrap").hide("slow");
-          $(".form-success").show("slow");
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-          $(".form-fail").show("slow");
-        }
+      $.post('/contact.php', $(this).serialize()).success(function(data) {
+        $(".form-wrap").hide("slow");
+        return $(".form-success").show("slow");
+      }).fail(function(data) {
+        return alert('failure');
       });
     }
   });

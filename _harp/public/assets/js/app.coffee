@@ -30,25 +30,15 @@ $(document).ready ->
         false
 
   $("#project-planner").submit (e) ->
-    formURL = undefined
-    postData = undefined
     e.preventDefault()
     if $(this).parsley("isValid")
-      postData = $(this).serializeArray()
-      formURL = $(this).attr("action")
-      $.ajax
-        url: formURL
-        type: "POST"
-        data: postData
-        success: (data, textStatus, jqXHR) ->
-          $(".form-wrap").hide "slow"
-          $(".form-success").show "slow"
-          return
-
-        error: (jqXHR, textStatus, errorThrown) ->
-          $(".form-fail").show "slow"
-          return
-
+      # alert $(this).serialize()
+      $.post('/contact.php', $(this).serialize()).success( (data) ->
+        $(".form-wrap").hide "slow"
+        $(".form-success").show "slow"
+        # alert 'success'
+      ).fail (data) ->
+        alert 'failure'
     return
 
   revealLogo()

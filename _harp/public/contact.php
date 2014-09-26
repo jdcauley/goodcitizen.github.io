@@ -3,7 +3,7 @@
   $nameParts = explode(" ", $name);
   $email = $_REQUEST['email'];
   $budget = $_REQUEST['budget'];
-  $message = $_REQUEST['message'];
+  $formMessage = $_REQUEST['message'];
 
   $to = 'john@wearegoodcitizen.com';
 
@@ -19,7 +19,7 @@
 	$message .= "<tr style='background: #eee;'><td><strong>Name:</strong> </td><td>" . strip_tags($name) . "</td></tr>";
 	$message .= "<tr><td><strong>Email:</strong> </td><td>" . strip_tags($email) . "</td></tr>";
   $message .= "<tr><td><strong>Phone:</strong> </td><td>" . strip_tags($budget) . "</td></tr>";
-	$message .= "<tr><td><strong>Message:</strong> </td><td>" . strip_tags($message) . "</td></tr>";
+	$message .= "<tr><td><strong>Message:</strong> </td><td>" . strip_tags($formMessage) . "</td></tr>";
 	$message .= "</table>";
 	$message .= "</body></html>";
 

@@ -12,15 +12,15 @@
     "img_url": "/assets/img/photo-team-magnetic.png"
   },
   "3": {
-    "name": "Maslo Media",
-    "title": "Fellow Avengers",
-    "superpower": "Strategy, Media, Production",
-    "img_url": "/assets/img/photo-team-maslo.png"
-  },
-  "4": {
     "name": "Jordan Cauley",
     "title": "Fellow Avenger",
     "superpower": "UX, Front-end Dev",
     "img_url": "/assets/img/photo-team-jordan.jpg"
+  },
+  "4": {
+    "name": "Foundry 336",
+    "title": "Fellow Avengers",
+    "superpower": "Story, Strategy, Identity",
+    "img_url": "/assets/img/photo-team-foundry336.png"
   }
 }
